@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Smoothix - Premium juice bar and smoothie cafe. Freshly crafted juices, smoothies, protein shakes, and acai bowls made from 100% natural ingredients.">
+  <meta name="keywords" content="juice bar, smoothie cafe, fresh juice, healthy drinks, acai bowl, protein shake, detox juice">
+  <meta name="author" content="Smoothix">
+  <title>Smoothix - Fresh Juice & Smoothie Bar</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍊</text></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body style="background:var(--body-bg);color:var(--body-text);transition:background .3s,color .3s">
+
+<div id="navbar"></div>
+
+<!-- ═══════════════ RUNNING TICKER ═══════════════ -->
+<div class="mt-16 md:mt-20" style="background:#FF7A18;overflow:hidden;padding:0.625rem 0">
+  <div class="flex whitespace-nowrap animate-marquee">
+    <span class="inline-flex items-center gap-3 px-8 text-sm font-semibold text-white"><i class="fa-solid fa-droplet"></i> Fresh Juices Daily</span>
+    <span class="inline-flex items-center gap-3 px-8 text-sm font-semibold text-white"><i class="fa-solid fa-truck"></i> Free Delivery on $50+</span>
+    <span class="inline-flex items-center gap-3 px-8 text-sm font-semibold text-white"><i class="fa-solid fa-leaf"></i> 100% Natural Ingredients</span>
+    <span class="inline-flex items-center gap-3 px-8 text-sm font-semibold text-white"><i class="fa-solid fa-fire"></i> New: Mango Tango Smoothie</span>
+    <span class="inline-flex items-center gap-3 px-8 text-sm font-semibold text-white"><i class="fa-solid fa-star"></i> Rated 4.9 by 12,000+ Customers</span>
+    <span class="inline-flex items-center gap-3 px-8 text-sm font-semibold text-white"><i class="fa-solid fa-percent"></i> Combo Offers Starting at $12.99</span>
+    <span class="inline-flex items-center gap-3 px-8 text-sm font-semibold text-white"><i class="fa-solid fa-droplet"></i> Fresh Juices Daily</span>
+    <span class="inline-flex items-center gap-3 px-8 text-sm font-semibold text-white"><i class="fa-solid fa-truck"></i> Free Delivery on $50+</span>
+    <span class="inline-flex items-center gap-3 px-8 text-sm font-semibold text-white"><i class="fa-solid fa-leaf"></i> 100% Natural Ingredients</span>
+    <span class="inline-flex items-center gap-3 px-8 text-sm font-semibold text-white"><i class="fa-solid fa-fire"></i> New: Mango Tango Smoothie</span>
+    <span class="inline-flex items-center gap-3 px-8 text-sm font-semibold text-white"><i class="fa-solid fa-star"></i> Rated 4.9 by 12,000+ Customers</span>
+    <span class="inline-flex items-center gap-3 px-8 text-sm font-semibold text-white"><i class="fa-solid fa-percent"></i> Combo Offers Starting at $12.99</span>
+  </div>
+</div>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="relative min-h-screen flex items-center overflow-hidden pt-4 pb-8" style="background:url('https://images.unsplash.com/photo-1622597467836-f3285f2131b8?w=1920&q=80') center/cover no-repeat;background-attachment:fixed">
+  <div class="absolute inset-0" style="background:linear-gradient(135deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.65) 50%,rgba(0,0,0,.35) 100%)"></div>
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-8 w-full">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div class="text-center lg:text-left">
+        <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold mb-8 reveal" style="background:rgba(255,122,24,.12);border:1px solid rgba(255,122,24,.25);color:#FF7A18;backdrop-filter:blur(8px)">
+          <span class="w-2 h-2 rounded-full animate-pulse" style="background:#FF7A18"></span>
+          100% Fresh &amp; Natural
+        </div>
+        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.05] mb-6 reveal reveal-delay-1" style="color:#fff">
+          Squeeze The<br>Day With<br><span style="color:#FF7A18">Every Sip.</span>
+        </h1>
+        <p class="text-lg sm:text-xl max-w-lg mx-auto lg:mx-0 mb-10 leading-relaxed reveal reveal-delay-2" style="color:rgba(255,255,255,.6)">
+          Cold-pressed juices, creamy smoothies &amp; acai bowls &mdash; crafted from 100% real fruits with zero preservatives or added sugar.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start mb-12 reveal reveal-delay-3">
+          <a href="#categories" class="group inline-flex items-center gap-3 font-bold px-10 py-4 rounded-full text-base transition-all duration-300 hover:scale-105" style="background:#FF7A18;color:#fff;box-shadow:0 10px 40px rgba(255,122,24,.4)">
+            <i class="fa-solid fa-compass text-base transition-transform duration-300 group-hover:rotate-45"></i>
+            Explore Menu
+          </a>
+          <a href="#popular" class="inline-flex items-center gap-3 font-bold px-10 py-4 rounded-full text-base transition-all duration-300 hover:scale-105" style="background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(8px)">
+            <i class="fa-solid fa-bag-shopping text-base"></i>
+            Order Now
+          </a>
+        </div>
+        <div class="flex items-center gap-10 justify-center lg:justify-start reveal reveal-delay-4">
+          <div class="text-center lg:text-left">
+            <span class="block text-3xl font-extrabold" style="color:#FF7A18">50+</span>
+            <span class="block text-xs font-medium mt-1" style="color:rgba(255,255,255,.4)">Menu Items</span>
+          </div>
+          <div class="w-px h-10" style="background:rgba(255,255,255,.12)"></div>
+          <div class="text-center lg:text-left">
+            <span class="block text-3xl font-extrabold" style="color:#FF7A18">12K+</span>
+            <span class="block text-xs font-medium mt-1" style="color:rgba(255,255,255,.4)">Happy Customers</span>
+          </div>
+          <div class="w-px h-10" style="background:rgba(255,255,255,.12)"></div>
+          <div class="text-center lg:text-left">
+            <span class="block text-3xl font-extrabold" style="color:#FF7A18">4.9</span>
+            <span class="block text-xs font-medium mt-1" style="color:rgba(255,255,255,.4)">Star Rating</span>
+          </div>
+        </div>
+      </div>
+      <div class="relative flex items-center justify-center reveal reveal-delay-2">
+        <div class="relative w-full max-w-md">
+          <div class="rounded-[2rem] overflow-hidden shadow-2xl" style="border:2px solid rgba(255,255,255,.1)">
+            <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=800&q=80" alt="Fresh Orange Juice" class="w-full h-[420px] object-cover">
+          </div>
+          
+          
+          <div class="absolute -bottom-5 left-8 px-5 py-3 rounded-xl font-bold text-sm text-white anim-float-alt" style="background:#FF7A18;box-shadow:0 10px 30px rgba(255,122,24,.4);animation-delay:1s">
+            <i class="fa-solid fa-truck mr-1.5"></i> Free Delivery
+          </div>
+          <div class="absolute -top-3 right-6 px-4 py-2 rounded-xl font-bold text-sm text-white anim-float" style="background:#6C63FF;box-shadow:0 10px 30px rgba(108,99,255,.4);animation-delay:2s">
+            <i class="fa-solid fa-leaf mr-1.5"></i> 100% Natural
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ ABOUT STRIP ═══════════════ -->
+
+
+<!-- ═══════════════ CATEGORIES ═══════════════ -->
+<section id="categories" class="py-20 sm:py-28" style="background:var(--body-bg)">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14 reveal">
+      <span class="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4" style="background:rgba(255,122,24,.1);color:#FF7A18">Our Categories</span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold" style="color:var(--nav-text)">What Are You <span style="color:#FF7A18">Craving?</span></h2>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-5">
+      <a href="menu.html" class="group card-lift rounded-3xl overflow-hidden text-center reveal" style="border:1px solid var(--border)">
+        <div class="relative h-36 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?w=400&q=80" alt="Fruit Juices" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(0,0,0,.6),transparent)"></div>
+          <h3 class="absolute bottom-3 left-0 right-0 font-bold text-sm text-white">Fruit Juices</h3>
+        </div>
+        <div class="py-3 px-2" style="background:var(--card-bg)">
+          <p class="text-xs" style="color:var(--nav-muted)">15+ varieties</p>
+        </div>
+      </a>
+      <a href="menu.html" class="group card-lift rounded-3xl overflow-hidden text-center reveal reveal-delay-1" style="border:1px solid var(--border)">
+        <div class="relative h-36 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=400&q=80" alt="Smoothies" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(0,0,0,.6),transparent)"></div>
+          <h3 class="absolute bottom-3 left-0 right-0 font-bold text-sm text-white">Smoothies</h3>
+        </div>
+        <div class="py-3 px-2" style="background:var(--card-bg)">
+          <p class="text-xs" style="color:var(--nav-muted)">12+ varieties</p>
+        </div>
+      </a>
+      <a href="menu.html" class="group card-lift rounded-3xl overflow-hidden text-center reveal reveal-delay-2" style="border:1px solid var(--border)">
+        <div class="relative h-36 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1579722821273-0f6c7d44362f?w=400&q=80" alt="Protein Shakes" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(0,0,0,.6),transparent)"></div>
+          <h3 class="absolute bottom-3 left-0 right-0 font-bold text-sm text-white">Protein Shakes</h3>
+        </div>
+        <div class="py-3 px-2" style="background:var(--card-bg)">
+          <p class="text-xs" style="color:var(--nav-muted)">8+ varieties</p>
+        </div>
+      </a>
+      <a href="menu.html" class="group card-lift rounded-3xl overflow-hidden text-center reveal" style="border:1px solid var(--border)">
+        <div class="relative h-36 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1609951651556-5334e2706168?w=400&q=80" alt="Detox Drinks" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(0,0,0,.6),transparent)"></div>
+          <h3 class="absolute bottom-3 left-0 right-0 font-bold text-sm text-white">Detox Drinks</h3>
+        </div>
+        <div class="py-3 px-2" style="background:var(--card-bg)">
+          <p class="text-xs" style="color:var(--nav-muted)">10+ varieties</p>
+        </div>
+      </a>
+      <a href="menu.html" class="group card-lift rounded-3xl overflow-hidden text-center reveal reveal-delay-1" style="border:1px solid var(--border)">
+        <div class="relative h-36 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?w=400&q=80" alt="Cold Pressed" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(0,0,0,.6),transparent)"></div>
+          <h3 class="absolute bottom-3 left-0 right-0 font-bold text-sm text-white">Cold Pressed</h3>
+        </div>
+        <div class="py-3 px-2" style="background:var(--card-bg)">
+          <p class="text-xs" style="color:var(--nav-muted)">9+ varieties</p>
+        </div>
+      </a>
+      <a href="menu.html" class="group card-lift rounded-3xl overflow-hidden text-center reveal reveal-delay-2" style="border:1px solid var(--border)">
+        <div class="relative h-36 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1589733955941-5eeaf752f6dd?w=400&q=80" alt="Seasonal Specials" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(0,0,0,.6),transparent)"></div>
+          <h3 class="absolute bottom-3 left-0 right-0 font-bold text-sm text-white">Seasonal Specials</h3>
+        </div>
+        <div class="py-3 px-2" style="background:var(--card-bg)">
+          <p class="text-xs" style="color:var(--nav-muted)">6+ varieties</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ POPULAR DRINKS ═══════════════ -->
+<section id="popular" class="py-20 sm:py-28" style="background:var(--secondary-bg)">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14 reveal">
+      <span class="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4" style="background:rgba(108,99,255,.1);color:#6C63FF">Customer Favorites</span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold" style="color:var(--nav-text)">Popular <span style="color:#FF7A18">Drinks</span></h2>
+    </div>
+    <div class="flex items-center justify-center gap-2 sm:gap-3 mb-12 flex-wrap reveal">
+      <button class="menu-tab active-tab px-5 py-2.5 rounded-xl text-sm font-semibold transition-all active:scale-95" data-category="all" style="background:#FF7A18;color:#fff;border:1px solid transparent">All</button>
+      <button class="menu-tab px-5 py-2.5 rounded-xl text-sm font-semibold transition-all active:scale-95" data-category="juice" style="background:var(--card-bg);color:var(--nav-text);border:1px solid var(--border)">Juices</button>
+      <button class="menu-tab px-5 py-2.5 rounded-xl text-sm font-semibold transition-all active:scale-95" data-category="smoothie" style="background:var(--card-bg);color:var(--nav-text);border:1px solid var(--border)">Smoothies</button>
+      <button class="menu-tab px-5 py-2.5 rounded-xl text-sm font-semibold transition-all active:scale-95" data-category="protein" style="background:var(--card-bg);color:var(--nav-text);border:1px solid var(--border)">Protein</button>
+      <button class="menu-tab px-5 py-2.5 rounded-xl text-sm font-semibold transition-all active:scale-95" data-category="detox" style="background:var(--card-bg);color:var(--nav-text);border:1px solid var(--border)">Detox</button>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Sunrise Detox -->
+      <div class="menu-card card-lift rounded-2xl overflow-hidden reveal" data-category="detox" style="background:var(--card-bg);border:1px solid var(--border)">
+        <div class="relative h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1610970881699-44a5587cabec?w=600&q=80" alt="Sunrise Detox" class="w-full h-full object-cover">
+          <div class="absolute top-3 right-3 text-white text-[10px] font-bold px-3 py-1 rounded-full" style="background:#FF7A18">Best Seller</div>
+        </div>
+        <div class="p-5">
+          <div class="flex items-start justify-between mb-2">
+            <h3 class="font-bold text-lg" style="color:var(--nav-text)">Sunrise Detox</h3>
+            <span class="font-extrabold text-lg" style="color:#FF7A18">$8.99</span>
+          </div>
+          <p class="text-xs mb-3" style="color:var(--nav-muted)">Spinach, kale, cucumber, celery, lemon, ginger</p>
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-[10px] font-semibold px-2.5 py-1 rounded-full" style="background:rgba(255,122,24,.08);color:#FF7A18"><i class="fa-solid fa-fire text-[9px] mr-1"></i>120 cal</span>
+          </div>
+          <div class="pt-3 flex items-center gap-2" style="border-top:1px solid var(--border)">
+            <i class="fa-solid fa-heart-pulse text-xs" style="color:#6C63FF"></i>
+            <p class="text-xs font-medium" style="color:var(--nav-muted)">Cleanses your body naturally</p>
+          </div>
+        </div>
+      </div>
+      <!-- Mango Tango -->
+      <div class="menu-card card-lift rounded-2xl overflow-hidden reveal reveal-delay-1" data-category="smoothie" style="background:var(--card-bg);border:1px solid var(--border)">
+        <div class="relative h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1546173159-315724a31696?w=600&q=80" alt="Mango Tango" class="w-full h-full object-cover">
+          <div class="absolute top-3 right-3 text-white text-[10px] font-bold px-3 py-1 rounded-full" style="background:#FF7A18">Popular</div>
+        </div>
+        <div class="p-5">
+          <div class="flex items-start justify-between mb-2">
+            <h3 class="font-bold text-lg" style="color:var(--nav-text)">Mango Tango</h3>
+            <span class="font-extrabold text-lg" style="color:#FF7A18">$9.49</span>
+          </div>
+          <p class="text-xs mb-3" style="color:var(--nav-muted)">Fresh mango, banana, coconut milk, turmeric</p>
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-[10px] font-semibold px-2.5 py-1 rounded-full" style="background:rgba(255,122,24,.08);color:#FF7A18"><i class="fa-solid fa-fire text-[9px] mr-1"></i>180 cal</span>
+          </div>
+          <div class="pt-3 flex items-center gap-2" style="border-top:1px solid var(--border)">
+            <i class="fa-solid fa-heart-pulse text-xs" style="color:#6C63FF"></i>
+            <p class="text-xs font-medium" style="color:var(--nav-muted)">Boosts immunity &amp; energy</p>
+          </div>
+        </div>
+      </div>
+      <!-- Berry Blast -->
+      <div class="menu-card card-lift rounded-2xl overflow-hidden reveal reveal-delay-2" data-category="smoothie" style="background:var(--card-bg);border:1px solid var(--border)">
+        <div class="relative h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=600&q=80" alt="Berry Blast" class="w-full h-full object-cover">
+          <div class="absolute top-3 right-3 text-white text-[10px] font-bold px-3 py-1 rounded-full" style="background:#6C63FF">New</div>
+        </div>
+        <div class="p-5">
+          <div class="flex items-start justify-between mb-2">
+            <h3 class="font-bold text-lg" style="color:var(--nav-text)">Berry Blast</h3>
+            <span class="font-extrabold text-lg" style="color:#FF7A18">$9.99</span>
+          </div>
+          <p class="text-xs mb-3" style="color:var(--nav-muted)">Blueberry, strawberry, acai, Greek yogurt, chia</p>
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-[10px] font-semibold px-2.5 py-1 rounded-full" style="background:rgba(255,122,24,.08);color:#FF7A18"><i class="fa-solid fa-fire text-[9px] mr-1"></i>160 cal</span>
+          </div>
+          <div class="pt-3 flex items-center gap-2" style="border-top:1px solid var(--border)">
+            <i class="fa-solid fa-heart-pulse text-xs" style="color:#6C63FF"></i>
+            <p class="text-xs font-medium" style="color:var(--nav-muted)">Rich in antioxidants &amp; fiber</p>
+          </div>
+        </div>
+      </div>
+      <!-- Tropical Sunrise -->
+      <div class="menu-card card-lift rounded-2xl overflow-hidden reveal" data-category="juice" style="background:var(--card-bg);border:1px solid var(--border)">
+        <div class="relative h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?w=600&q=80" alt="Tropical Sunrise" class="w-full h-full object-cover">
+        </div>
+        <div class="p-5">
+          <div class="flex items-start justify-between mb-2">
+            <h3 class="font-bold text-lg" style="color:var(--nav-text)">Tropical Sunrise</h3>
+            <span class="font-extrabold text-lg" style="color:#FF7A18">$8.49</span>
+          </div>
+          <p class="text-xs mb-3" style="color:var(--nav-muted)">Pineapple, orange, passion fruit, turmeric</p>
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-[10px] font-semibold px-2.5 py-1 rounded-full" style="background:rgba(255,122,24,.08);color:#FF7A18"><i class="fa-solid fa-fire text-[9px] mr-1"></i>140 cal</span>
+          </div>
+          <div class="pt-3 flex items-center gap-2" style="border-top:1px solid var(--border)">
+            <i class="fa-solid fa-heart-pulse text-xs" style="color:#6C63FF"></i>
+            <p class="text-xs font-medium" style="color:var(--nav-muted)">Energizing vitamin C boost</p>
+          </div>
+        </div>
+      </div>
+      <!-- Protein Power -->
+      <div class="menu-card card-lift rounded-2xl overflow-hidden reveal reveal-delay-1" data-category="protein" style="background:var(--card-bg);border:1px solid var(--border)">
+        <div class="relative h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1502741224143-90386d7f8c82?w=600&q=80" alt="Protein Power" class="w-full h-full object-cover">
+          <div class="absolute top-3 right-3 text-white text-[10px] font-bold px-3 py-1 rounded-full" style="background:#6C63FF">Fitness</div>
+        </div>
+        <div class="p-5">
+          <div class="flex items-start justify-between mb-2">
+            <h3 class="font-bold text-lg" style="color:var(--nav-text)">Protein Power</h3>
+            <span class="font-extrabold text-lg" style="color:#FF7A18">$10.99</span>
+          </div>
+          <p class="text-xs mb-3" style="color:var(--nav-muted)">Banana, peanut butter, whey, oat milk, cocoa</p>
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-[10px] font-semibold px-2.5 py-1 rounded-full" style="background:rgba(255,122,24,.08);color:#FF7A18"><i class="fa-solid fa-fire text-[9px] mr-1"></i>320 cal</span>
+          </div>
+          <div class="pt-3 flex items-center gap-2" style="border-top:1px solid var(--border)">
+            <i class="fa-solid fa-heart-pulse text-xs" style="color:#6C63FF"></i>
+            <p class="text-xs font-medium" style="color:var(--nav-muted)">30g protein for muscle recovery</p>
+          </div>
+        </div>
+      </div>
+      <!-- Green Machine -->
+      <div class="menu-card card-lift rounded-2xl overflow-hidden reveal reveal-delay-2" data-category="detox" style="background:var(--card-bg);border:1px solid var(--border)">
+        <div class="relative h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1622597467836-f3285f2131b8?w=600&q=80" alt="Green Machine" class="w-full h-full object-cover">
+          <div class="absolute top-3 right-3 text-white text-[10px] font-bold px-3 py-1 rounded-full" style="background:#FF7A18">Cleanse</div>
+        </div>
+        <div class="p-5">
+          <div class="flex items-start justify-between mb-2">
+            <h3 class="font-bold text-lg" style="color:var(--nav-text)">Green Machine</h3>
+            <span class="font-extrabold text-lg" style="color:#FF7A18">$9.29</span>
+          </div>
+          <p class="text-xs mb-3" style="color:var(--nav-muted)">Kale, celery, green apple, spirulina, lemon</p>
+          <div class="flex items-center gap-2 mb-3">
+            <span class="text-[10px] font-semibold px-2.5 py-1 rounded-full" style="background:rgba(255,122,24,.08);color:#FF7A18"><i class="fa-solid fa-fire text-[9px] mr-1"></i>110 cal</span>
+          </div>
+          <div class="pt-3 flex items-center gap-2" style="border-top:1px solid var(--border)">
+            <i class="fa-solid fa-heart-pulse text-xs" style="color:#6C63FF"></i>
+            <p class="text-xs font-medium" style="color:var(--nav-muted)">Deep detox &amp; alkalizing</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ HOW IT WORKS ═══════════════ -->
+<section class="py-20 sm:py-28" style="background:var(--body-bg)">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14 reveal">
+      <span class="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4" style="background:rgba(255,122,24,.1);color:#FF7A18">Simple Process</span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold" style="color:var(--nav-text)">How It <span style="color:#FF7A18">Works</span></h2>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+      <div class="hidden md:block absolute top-16 left-[20%] right-[20%] h-0.5" style="background:linear-gradient(90deg,#FF7A18,#6C63FF)"></div>
+      <div class="relative text-center reveal">
+        <div class="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden shadow-xl" style="border:3px solid #FF7A18">
+          <img src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?w=300&q=80" alt="Pick Your Ingredients" class="w-full h-full object-cover">
+        </div>
+        <div class="absolute top-14 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-bold" style="background:#FF7A18;box-shadow:0 4px 15px rgba(255,122,24,.4)">1</div>
+        <h3 class="font-bold text-lg mb-2" style="color:var(--nav-text)">Pick Your Ingredients</h3>
+        <p class="text-sm max-w-xs mx-auto" style="color:var(--nav-muted)">Choose from our selection of fresh, organic fruits, vegetables, and superfoods.</p>
+      </div>
+      <div class="relative text-center reveal reveal-delay-1">
+        <div class="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden shadow-xl" style="border:3px solid #6C63FF">
+          <img src="https://images.unsplash.com/photo-1590301157890-4810ed352733?w=300&q=80" alt="We Blend It Fresh" class="w-full h-full object-cover">
+        </div>
+        <div class="absolute top-14 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-bold" style="background:#6C63FF;box-shadow:0 4px 15px rgba(108,99,255,.4)">2</div>
+        <h3 class="font-bold text-lg mb-2" style="color:var(--nav-text)">We Blend It Fresh</h3>
+        <p class="text-sm max-w-xs mx-auto" style="color:var(--nav-muted)">Our expert blenders craft your order in real-time with zero preservatives.</p>
+      </div>
+      <div class="relative text-center reveal reveal-delay-2">
+        <div class="relative w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden shadow-xl" style="border:3px solid #FF7A18">
+          <img src="https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?w=300&q=80" alt="Enjoy &amp; Stay Healthy" class="w-full h-full object-cover">
+        </div>
+        <div class="absolute top-14 left-1/2 -translate-x-1/2 w-8 h-8 rounded-full flex items-center justify-center text-white text-sm font-bold" style="background:#FF7A18;box-shadow:0 4px 15px rgba(255,122,24,.4)">3</div>
+        <h3 class="font-bold text-lg mb-2" style="color:var(--nav-text)">Enjoy &amp; Stay Healthy</h3>
+        <p class="text-sm max-w-xs mx-auto" style="color:var(--nav-muted)">Savor the pure taste of nature delivered right to your hands.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ HEALTH BENEFITS ═══════════════ -->
+<section class="py-20 sm:py-28" style="background:var(--secondary-bg)">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div class="relative reveal">
+        <div class="rounded-[2rem] overflow-hidden shadow-2xl">
+          <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=800&q=80" alt="Healthy Lifestyle" class="w-full h-[400px] lg:h-[500px] object-cover">
+        </div>
+        <div class="absolute -bottom-6 -right-6 w-40 h-40 rounded-2xl overflow-hidden shadow-xl hidden lg:block anim-float" style="border:3px solid var(--secondary-bg)">
+          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=300&q=80" alt="Fresh Produce" class="w-full h-full object-cover">
+        </div>
+        <div class="absolute -top-4 -left-4 px-5 py-3 rounded-xl font-bold text-sm text-white hidden lg:block anim-float-alt" style="background:#FF7A18;box-shadow:0 10px 30px rgba(255,122,24,.4)">
+          <i class="fa-solid fa-award mr-1.5"></i> #1 Juice Bar
+        </div>
+      </div>
+      <div>
+        <span class="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4 reveal" style="background:rgba(108,99,255,.1);color:#6C63FF">Why Fresh Juice?</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-6 reveal reveal-delay-1" style="color:var(--nav-text)">Health <span style="color:#FF7A18">Benefits</span></h2>
+        <div class="space-y-5">
+          <div class="flex items-start gap-4 reveal reveal-delay-1">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(255,122,24,.08)"><i class="fa-solid fa-shield-halved text-lg" style="color:#FF7A18"></i></div>
+            <div><h3 class="font-bold text-base mb-1" style="color:var(--nav-text)">Immunity Boost</h3><p class="text-sm" style="color:var(--nav-muted)">Packed with vitamins A, C, and E to strengthen your natural defenses against illness.</p></div>
+          </div>
+          <div class="flex items-start gap-4 reveal reveal-delay-2">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(108,99,255,.08)"><i class="fa-solid fa-bolt text-lg" style="color:#6C63FF"></i></div>
+            <div><h3 class="font-bold text-base mb-1" style="color:var(--nav-text)">Energy Boost</h3><p class="text-sm" style="color:var(--nav-muted)">Natural sugars provide sustained energy without the crash of artificial drinks.</p></div>
+          </div>
+          <div class="flex items-start gap-4 reveal reveal-delay-3">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(255,122,24,.08)"><i class="fa-solid fa-spa text-lg" style="color:#FF7A18"></i></div>
+            <div><h3 class="font-bold text-base mb-1" style="color:var(--nav-text)">Deep Detox</h3><p class="text-sm" style="color:var(--nav-muted)">Cleanse your body of toxins with our specially formulated detox blends.</p></div>
+          </div>
+          <div class="flex items-start gap-4 reveal reveal-delay-4">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(108,99,255,.08)"><i class="fa-solid fa-weight-scale text-lg" style="color:#6C63FF"></i></div>
+            <div><h3 class="font-bold text-base mb-1" style="color:var(--nav-text)">Weight Management</h3><p class="text-sm" style="color:var(--nav-muted)">Low-calorie, high-nutrient drinks that support your weight loss journey.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ INGREDIENTS ═══════════════ -->
+<section class="py-20 sm:py-28" style="background:var(--body-bg)">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14 reveal">
+      <span class="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4" style="background:rgba(255,122,24,.1);color:#FF7A18">Ingredients</span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold" style="color:var(--nav-text)">Powered by <span style="color:#FF7A18">Nature</span></h2>
+    </div>
+    <div class="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4">
+      <div class="group card-lift rounded-2xl overflow-hidden text-center reveal" style="border:1px solid var(--border)">
+        <div class="relative h-20 sm:h-24 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1582979512210-99b6a53386f9?w=200&q=80" alt="Orange" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        </div>
+        <div class="py-2.5 px-1" style="background:var(--card-bg)">
+          <h4 class="font-bold text-xs" style="color:var(--nav-text)">Orange</h4>
+          <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full mt-1 inline-block" style="background:rgba(108,99,255,.08);color:#6C63FF">Vitamin C</span>
+        </div>
+      </div>
+      <div class="group card-lift rounded-2xl overflow-hidden text-center reveal reveal-delay-1" style="border:1px solid var(--border)">
+        <div class="relative h-20 sm:h-24 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=200&q=80" alt="Strawberry" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        </div>
+        <div class="py-2.5 px-1" style="background:var(--card-bg)">
+          <h4 class="font-bold text-xs" style="color:var(--nav-text)">Strawberry</h4>
+          <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full mt-1 inline-block" style="background:rgba(255,122,24,.08);color:#FF7A18">Antioxidants</span>
+        </div>
+      </div>
+      <div class="group card-lift rounded-2xl overflow-hidden text-center reveal reveal-delay-2" style="border:1px solid var(--border)">
+        <div class="relative h-20 sm:h-24 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1657999846716-9ce28c88132e?w=200&q=80" alt="Blueberry" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        </div>
+        <div class="py-2.5 px-1" style="background:var(--card-bg)">
+          <h4 class="font-bold text-xs" style="color:var(--nav-text)">Blueberry</h4>
+          <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full mt-1 inline-block" style="background:rgba(108,99,255,.08);color:#6C63FF">Brain Health</span>
+        </div>
+      </div>
+      <div class="group card-lift rounded-2xl overflow-hidden text-center reveal" style="border:1px solid var(--border)">
+        <div class="relative h-20 sm:h-24 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=200&q=80" alt="Banana" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        </div>
+        <div class="py-2.5 px-1" style="background:var(--card-bg)">
+          <h4 class="font-bold text-xs" style="color:var(--nav-text)">Banana</h4>
+          <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full mt-1 inline-block" style="background:rgba(255,122,24,.08);color:#FF7A18">Potassium</span>
+        </div>
+      </div>
+      <div class="group card-lift rounded-2xl overflow-hidden text-center reveal reveal-delay-1" style="border:1px solid var(--border)">
+        <div class="relative h-20 sm:h-24 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1553279768-865429fa0078?w=200&q=80" alt="Mango" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        </div>
+        <div class="py-2.5 px-1" style="background:var(--card-bg)">
+          <h4 class="font-bold text-xs" style="color:var(--nav-text)">Mango</h4>
+          <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full mt-1 inline-block" style="background:rgba(108,99,255,.08);color:#6C63FF">Vitamin A</span>
+        </div>
+      </div>
+      <div class="group card-lift rounded-2xl overflow-hidden text-center reveal reveal-delay-2" style="border:1px solid var(--border)">
+        <div class="relative h-20 sm:h-24 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?w=200&q=80" alt="Pineapple" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        </div>
+        <div class="py-2.5 px-1" style="background:var(--card-bg)">
+          <h4 class="font-bold text-xs" style="color:var(--nav-text)">Pineapple</h4>
+          <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full mt-1 inline-block" style="background:rgba(255,122,24,.08);color:#FF7A18">Bromelain</span>
+        </div>
+      </div>
+      <div class="group card-lift rounded-2xl overflow-hidden text-center reveal" style="border:1px solid var(--border)">
+        <div class="relative h-20 sm:h-24 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1623030235422-07f96401f5ea?w=200&q=80" alt="Dragon Fruit" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        </div>
+        <div class="py-2.5 px-1" style="background:var(--card-bg)">
+          <h4 class="font-bold text-xs" style="color:var(--nav-text)">Dragon Fruit</h4>
+          <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full mt-1 inline-block" style="background:rgba(108,99,255,.08);color:#6C63FF">Iron</span>
+        </div>
+      </div>
+      <div class="group card-lift rounded-2xl overflow-hidden text-center reveal reveal-delay-1" style="border:1px solid var(--border)">
+        <div class="relative h-20 sm:h-24 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1628557044797-f21a177c37ec?w=200&q=80" alt="Mint" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        </div>
+        <div class="py-2.5 px-1" style="background:var(--card-bg)">
+          <h4 class="font-bold text-xs" style="color:var(--nav-text)">Mint</h4>
+          <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full mt-1 inline-block" style="background:rgba(255,122,24,.08);color:#FF7A18">Digestion</span>
+        </div>
+      </div>
+      <div class="group card-lift rounded-2xl overflow-hidden text-center reveal reveal-delay-2" style="border:1px solid var(--border)">
+        <div class="relative h-20 sm:h-24 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?w=200&q=80" alt="Almond Milk" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        </div>
+        <div class="py-2.5 px-1" style="background:var(--card-bg)">
+          <h4 class="font-bold text-xs" style="color:var(--nav-text)">Almond Milk</h4>
+          <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full mt-1 inline-block" style="background:rgba(108,99,255,.08);color:#6C63FF">Low Cal</span>
+        </div>
+      </div>
+      <div class="group card-lift rounded-2xl overflow-hidden text-center reveal" style="border:1px solid var(--border)">
+        <div class="relative h-20 sm:h-24 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1574156814952-678e5869c5b2?w=200&q=80" alt="Oats" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        </div>
+        <div class="py-2.5 px-1" style="background:var(--card-bg)">
+          <h4 class="font-bold text-xs" style="color:var(--nav-text)">Oats</h4>
+          <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full mt-1 inline-block" style="background:rgba(255,122,24,.08);color:#FF7A18">Fiber</span>
+        </div>
+      </div>
+      <div class="group card-lift rounded-2xl overflow-hidden text-center reveal reveal-delay-1" style="border:1px solid var(--border)">
+        <div class="relative h-20 sm:h-24 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=200&q=80" alt="Protein" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        </div>
+        <div class="py-2.5 px-1" style="background:var(--card-bg)">
+          <h4 class="font-bold text-xs" style="color:var(--nav-text)">Protein</h4>
+          <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full mt-1 inline-block" style="background:rgba(108,99,255,.08);color:#6C63FF">Muscle</span>
+        </div>
+      </div>
+      <div class="group card-lift rounded-2xl overflow-hidden text-center reveal reveal-delay-2" style="border:1px solid var(--border)">
+        <div class="relative h-20 sm:h-24 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1524179091875-bf99a9a6af57?w=200&q=80" alt="Kale" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        </div>
+        <div class="py-2.5 px-1" style="background:var(--card-bg)">
+          <h4 class="font-bold text-xs" style="color:var(--nav-text)">Kale</h4>
+          <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full mt-1 inline-block" style="background:rgba(255,122,24,.08);color:#FF7A18">Detox</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ OFFICE CATERING ═══════════════ -->
+<section id="catering" class="py-20 sm:py-28" style="background:var(--body-bg)">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div class="reveal">
+        <span class="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4" style="background:rgba(255,122,24,.1);color:#FF7A18">Office Catering</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4" style="color:var(--nav-text)">Fresh Juices for <span style="color:#FF7A18">Your Team</span></h2>
+        <p class="text-base mb-8 max-w-lg" style="color:var(--nav-muted)">Keep your team energized with our corporate catering. Fresh smoothies, juice flights, and healthy snack platters delivered to your office, event, or meeting.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+          <div class="flex items-start gap-3 p-4 rounded-xl" style="background:var(--card-bg);border:1px solid var(--border)"><div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background:#FF7A18"><i class="fa-solid fa-building text-white text-sm"></i></div><div><h4 class="font-bold text-sm" style="color:var(--nav-text)">Corporate Offices</h4><p class="text-xs" style="color:var(--nav-muted)">Weekly juice plans</p></div></div>
+          <div class="flex items-start gap-3 p-4 rounded-xl" style="background:var(--card-bg);border:1px solid var(--border)"><div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background:#FF7A18"><i class="fa-solid fa-calendar-days text-white text-sm"></i></div><div><h4 class="font-bold text-sm" style="color:var(--nav-text)">Events &amp; Meetings</h4><p class="text-xs" style="color:var(--nav-muted)">Custom packages</p></div></div>
+          <div class="flex items-start gap-3 p-4 rounded-xl" style="background:var(--card-bg);border:1px solid var(--border)"><div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background:#FF7A18"><i class="fa-solid fa-graduation-cap text-white text-sm"></i></div><div><h4 class="font-bold text-sm" style="color:var(--nav-text)">College Programs</h4><p class="text-xs" style="color:var(--nav-muted)">Student specials</p></div></div>
+          <div class="flex items-start gap-3 p-4 rounded-xl" style="background:var(--card-bg);border:1px solid var(--border)"><div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background:#FF7A18"><i class="fa-solid fa-cake-candles text-white text-sm"></i></div><div><h4 class="font-bold text-sm" style="color:var(--nav-text)">Birthday Parties</h4><p class="text-xs" style="color:var(--nav-muted)">Fun drink stations</p></div></div>
+        </div>
+      </div>
+      <div class="reveal reveal-delay-2">
+        <div class="rounded-2xl overflow-hidden shadow-xl" style="border:1px solid var(--border)">
+          <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?w=800&q=80" alt="Catering Setup" class="w-full h-48 object-cover">
+          <div class="p-6 sm:p-8" style="background:var(--card-bg)">
+            <h3 class="font-bold text-xl mb-6" style="color:var(--nav-text)">Request a Catering Quote</h3>
+            <form class="sm-form space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div><label class="block text-xs font-semibold mb-1.5" style="color:var(--nav-muted)">Full Name *</label><input type="text" required placeholder="John Smith" class="w-full px-4 py-3 rounded-xl text-sm transition-all focus:outline-none focus:ring-2" style="background:var(--secondary-bg);border:1px solid var(--border);color:var(--body-text)"></div>
+                <div><label class="block text-xs font-semibold mb-1.5" style="color:var(--nav-muted)">Email *</label><input type="email" required placeholder="john@company.com" class="w-full px-4 py-3 rounded-xl text-sm transition-all focus:outline-none focus:ring-2" style="background:var(--secondary-bg);border:1px solid var(--border);color:var(--body-text)"></div>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div><label class="block text-xs font-semibold mb-1.5" style="color:var(--nav-muted)">Company *</label><input type="text" required placeholder="Acme Corp" class="w-full px-4 py-3 rounded-xl text-sm transition-all focus:outline-none focus:ring-2" style="background:var(--secondary-bg);border:1px solid var(--border);color:var(--body-text)"></div>
+                <div><label class="block text-xs font-semibold mb-1.5" style="color:var(--nav-muted)">Team Size *</label><select required class="w-full px-4 py-3 rounded-xl text-sm transition-all focus:outline-none focus:ring-2" style="background:var(--secondary-bg);border:1px solid var(--border);color:var(--nav-muted)"><option value="">Select range</option><option>10 - 25 people</option><option>26 - 50 people</option><option>51 - 100 people</option><option>100+ people</option></select></div>
+              </div>
+              <div><label class="block text-xs font-semibold mb-1.5" style="color:var(--nav-muted)">Special Requirements</label><textarea rows="3" placeholder="Dietary restrictions, allergies, preferences..." class="w-full px-4 py-3 rounded-xl text-sm transition-all focus:outline-none focus:ring-2 resize-none" style="background:var(--secondary-bg);border:1px solid var(--border);color:var(--body-text)"></textarea></div>
+              <button type="submit" class="w-full py-3.5 rounded-xl text-sm font-bold shadow-lg" style="background:#FF7A18;color:#fff"><i class="fa-solid fa-paper-plane mr-2"></i> Send Enquiry</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ STORE INFORMATION ═══════════════ -->
+<section id="store" class="py-20 sm:py-28" style="background:var(--secondary-bg)">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-5 gap-8">
+      <div class="lg:col-span-2 reveal">
+        <div class="rounded-2xl overflow-hidden shadow-xl h-full" style="border:1px solid var(--border)">
+          <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=600&q=80" alt="Smoothix Store Interior" class="w-full h-48 lg:h-full object-cover">
+        </div>
+      </div>
+      <div class="lg:col-span-3">
+        <span class="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4 reveal" style="background:rgba(108,99,255,.1);color:#6C63FF">Visit Us</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold mb-8 reveal reveal-delay-1" style="color:var(--nav-text)">Store <span style="color:#FF7A18">Information</span></h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="card-lift rounded-2xl p-5 reveal" style="background:var(--card-bg);border:1px solid var(--border)"><div class="w-10 h-10 rounded-xl flex items-center justify-center mb-3" style="background:rgba(255,122,24,.08)"><i class="fa-solid fa-clock text-base" style="color:#FF7A18"></i></div><h3 class="font-bold text-sm mb-2" style="color:var(--nav-text)">Opening Hours</h3><ul class="space-y-1"><li class="text-xs" style="color:var(--nav-muted)">Mon - Fri: 7 AM - 9 PM</li><li class="text-xs" style="color:var(--nav-muted)">Sat - Sun: 8 AM - 10 PM</li></ul></div>
+          <div class="card-lift rounded-2xl p-5 reveal reveal-delay-1" style="background:var(--card-bg);border:1px solid var(--border)"><div class="w-10 h-10 rounded-xl flex items-center justify-center mb-3" style="background:rgba(108,99,255,.08)"><i class="fa-solid fa-location-dot text-base" style="color:#6C63FF"></i></div><h3 class="font-bold text-sm mb-2" style="color:var(--nav-text)">Location</h3><ul class="space-y-1"><li class="text-xs" style="color:var(--nav-muted)">123 Fresh Avenue</li><li class="text-xs" style="color:var(--nav-muted)">Green District, New York, NY 10001</li></ul></div>
+          <div class="card-lift rounded-2xl p-5 reveal" style="background:var(--card-bg);border:1px solid var(--border)"><div class="w-10 h-10 rounded-xl flex items-center justify-center mb-3" style="background:rgba(108,99,255,.08)"><i class="fa-solid fa-phone text-base" style="color:#6C63FF"></i></div><h3 class="font-bold text-sm mb-2" style="color:var(--nav-text)">Contact</h3><ul class="space-y-1"><li class="text-xs" style="color:var(--nav-muted)">(212) 555-1234</li><li class="text-xs" style="color:var(--nav-muted)">hello@smoothix.com</li></ul></div>
+          <div class="card-lift rounded-2xl p-5 reveal reveal-delay-1" style="background:var(--card-bg);border:1px solid var(--border)"><div class="w-10 h-10 rounded-xl flex items-center justify-center mb-3" style="background:rgba(255,122,24,.08)"><i class="fa-solid fa-star text-base" style="color:#FF7A18"></i></div><h3 class="font-bold text-sm mb-2" style="color:var(--nav-text)">Amenities</h3><ul class="space-y-1"><li class="text-xs" style="color:var(--nav-muted)">Free WiFi &bull; Takeaway</li><li class="text-xs" style="color:var(--nav-muted)">Home Delivery &bull; Free Parking</li></ul></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ TESTIMONIALS ═══════════════ -->
+<section class="py-20 sm:py-28 overflow-hidden" style="background:var(--body-bg)">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14 reveal">
+      <span class="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4" style="background:rgba(255,122,24,.1);color:#FF7A18">Testimonials</span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold" style="color:var(--nav-text)">Loved by <span style="color:#FF7A18">Thousands</span></h2>
+    </div>
+    <div class="relative max-w-3xl mx-auto">
+      <div class="overflow-hidden rounded-3xl">
+        <div class="testimonial-track">
+          <div class="testimonial-slide"><div class="rounded-3xl p-8 sm:p-10 text-center" style="background:var(--card-bg);border:1px solid var(--border)"><div class="flex items-center justify-center gap-1 mb-4"><i class="fa-solid fa-star text-sm" style="color:#FF7A18"></i><i class="fa-solid fa-star text-sm" style="color:#FF7A18"></i><i class="fa-solid fa-star text-sm" style="color:#FF7A18"></i><i class="fa-solid fa-star text-sm" style="color:#FF7A18"></i><i class="fa-solid fa-star text-sm" style="color:#FF7A18"></i></div><p class="text-base leading-relaxed mb-6 max-w-xl mx-auto" style="color:var(--nav-muted)">"The Sunrise Detox has become my daily ritual. I've never felt more energized and clean. The fact that everything is made fresh with real ingredients makes me feel amazing about what I consume."</p><div class="flex items-center justify-center gap-3"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Sarah K." class="w-12 h-12 rounded-full object-cover"><div class="text-left"><p class="font-bold text-sm" style="color:var(--nav-text)">Sarah K.</p><p class="text-xs" style="color:var(--nav-muted)">Yoga Instructor</p></div></div></div></div>
+          <div class="testimonial-slide"><div class="rounded-3xl p-8 sm:p-10 text-center" style="background:var(--card-bg);border:1px solid var(--border)"><div class="flex items-center justify-center gap-1 mb-4"><i class="fa-solid fa-star text-sm" style="color:#FF7A18"></i><i class="fa-solid fa-star text-sm" style="color:#FF7A18"></i><i class="fa-solid fa-star text-sm" style="color:#FF7A18"></i><i class="fa-solid fa-star text-sm" style="color:#FF7A18"></i><i class="fa-solid fa-star text-sm" style="color:#FF7A18"></i></div><p class="text-base leading-relaxed mb-6 max-w-xl mx-auto" style="color:var(--nav-muted)">"We order Smoothix catering for our team every Friday. The variety is incredible, everything arrives fresh, and our employees absolutely love it. It's become the highlight of our work week."</p><div class="flex items-center justify-center gap-3"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="Michael R." class="w-12 h-12 rounded-full object-cover"><div class="text-left"><p class="font-bold text-sm" style="color:var(--nav-text)">Michael R.</p><p class="text-xs" style="color:var(--nav-muted)">Office Manager</p></div></div></div></div>
+          <div class="testimonial-slide"><div class="rounded-3xl p-8 sm:p-10 text-center" style="background:var(--card-bg);border:1px solid var(--border)"><div class="flex items-center justify-center gap-1 mb-4"><i class="fa-solid fa-star text-sm" style="color:#FF7A18"></i><i class="fa-solid fa-star text-sm" style="color:#FF7A18"></i><i class="fa-solid fa-star text-sm" style="color:#FF7A18"></i><i class="fa-solid fa-star text-sm" style="color:#FF7A18"></i><i class="fa-solid fa-star text-sm" style="color:#FF7A18"></i></div><p class="text-base leading-relaxed mb-6 max-w-xl mx-auto" style="color:var(--nav-muted)">"Best protein shake I've ever had! The Protein Power combo after my morning workout is the perfect recovery fuel. Real ingredients, amazing taste, and I can actually feel the difference."</p><div class="flex items-center justify-center gap-3"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Aisha L." class="w-12 h-12 rounded-full object-cover"><div class="text-left"><p class="font-bold text-sm" style="color:var(--nav-text)">Aisha L.</p><p class="text-xs" style="color:var(--nav-muted)">Fitness Enthusiast</p></div></div></div></div>
+          <div class="testimonial-slide"><div class="rounded-3xl p-8 sm:p-10 text-center" style="background:var(--card-bg);border:1px solid var(--border)"><div class="flex items-center justify-center gap-1 mb-4"><i class="fa-solid fa-star text-sm" style="color:#FF7A18"></i><i class="fa-solid fa-star text-sm" style="color:#FF7A18"></i><i class="fa-solid fa-star text-sm" style="color:#FF7A18"></i><i class="fa-solid fa-star text-sm" style="color:#FF7A18"></i><i class="fa-solid fa-star text-sm" style="color:#FF7A18"></i></div><p class="text-base leading-relaxed mb-6 max-w-xl mx-auto" style="color:var(--nav-muted)">"The Family Pack is incredible value. My roommates and I share it every weekend. The mango tango smoothie is absolutely addictive. Best juice bar near campus, hands down!"</p><div class="flex items-center justify-center gap-3"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80" alt="David C." class="w-12 h-12 rounded-full object-cover"><div class="text-left"><p class="font-bold text-sm" style="color:var(--nav-text)">David C.</p><p class="text-xs" style="color:var(--nav-muted)">College Student</p></div></div></div></div>
+        </div>
+      </div>
+      <div class="flex items-center justify-center gap-2 mt-6 testimonial-dots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ WHY CHOOSE US ═══════════════ -->
+<section class="py-20 sm:py-28" style="background:var(--secondary-bg)">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14 reveal">
+      <span class="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4" style="background:rgba(108,99,255,.1);color:#6C63FF">Our Promise</span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold" style="color:var(--nav-text)">Why Choose <span style="color:#FF7A18">Smoothix</span></h2>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+      <div class="card-lift rounded-2xl p-5 text-center reveal" style="background:var(--card-bg);border:1px solid var(--border)"><div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-3" style="background:rgba(255,122,24,.08)"><i class="fa-solid fa-leaf text-xl" style="color:#FF7A18"></i></div><h4 class="font-bold text-sm" style="color:var(--nav-text)">100% Fresh Fruits</h4></div>
+      <div class="card-lift rounded-2xl p-5 text-center reveal reveal-delay-1" style="background:var(--card-bg);border:1px solid var(--border)"><div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-3" style="background:rgba(255,122,24,.08)"><i class="fa-solid fa-ban text-xl" style="color:#FF7A18"></i></div><h4 class="font-bold text-sm" style="color:var(--nav-text)">No Artificial Sugar</h4></div>
+      <div class="card-lift rounded-2xl p-5 text-center reveal reveal-delay-2" style="background:var(--card-bg);border:1px solid var(--border)"><div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-3" style="background:rgba(108,99,255,.08)"><i class="fa-solid fa-wand-magic-sparkles text-xl" style="color:#6C63FF"></i></div><h4 class="font-bold text-sm" style="color:var(--nav-text)">Prepared Live</h4></div>
+      <div class="card-lift rounded-2xl p-5 text-center reveal" style="background:var(--card-bg);border:1px solid var(--border)"><div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-3" style="background:rgba(255,122,24,.08)"><i class="fa-solid fa-gem text-xl" style="color:#FF7A18"></i></div><h4 class="font-bold text-sm" style="color:var(--nav-text)">Premium Ingredients</h4></div>
+      <div class="card-lift rounded-2xl p-5 text-center reveal reveal-delay-1" style="background:var(--card-bg);border:1px solid var(--border)"><div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-3" style="background:rgba(108,99,255,.08)"><i class="fa-solid fa-bolt text-xl" style="color:#6C63FF"></i></div><h4 class="font-bold text-sm" style="color:var(--nav-text)">Fast Service</h4></div>
+      <div class="card-lift rounded-2xl p-5 text-center reveal reveal-delay-2" style="background:var(--card-bg);border:1px solid var(--border)"><div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-3" style="background:rgba(108,99,255,.08)"><i class="fa-solid fa-hand-holding-dollar text-xl" style="color:#6C63FF"></i></div><h4 class="font-bold text-sm" style="color:var(--nav-text)">Affordable Prices</h4></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ NEWSLETTER ═══════════════ -->
+<section class="relative py-20 sm:py-28 overflow-hidden" style="background:#FF7A18">
+  <div class="absolute inset-0 opacity-10">
+    <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1920&q=80" alt="" class="w-full h-full object-cover">
+  </div>
+  <div class="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+    <i class="fa-solid fa-envelope-open-text text-4xl text-white/80 mb-4"></i>
+    <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-3">Stay Fresh with Smoothix</h2>
+    <p class="text-base text-white/70 mb-8">Subscribe for exclusive deals, new menu drops, and weekly health tips delivered to your inbox.</p>
+    <form id="newsletterForm" class="flex flex-col sm:flex-row items-center gap-3 max-w-lg mx-auto">
+      <input type="email" required placeholder="Enter your email" class="w-full flex-1 px-5 py-3.5 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-white/50 newsletter-input" style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);color:#fff">
+      <button type="submit" class="w-full sm:w-auto px-8 py-3.5 rounded-xl text-sm font-bold bg-white transition-all hover:scale-105 active:scale-95 shadow-lg" style="color:#FF7A18">Subscribe</button>
+    </form>
+    <p class="text-xs text-white/50 mt-3">No spam, unsubscribe anytime. We respect your privacy.</p>
+  </div>
+</section>
+
+<div id="footer"></div>
+
+<button id="backToTop" class="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full shadow-xl flex items-center justify-center transition-all duration-300 opacity-0 invisible hover:scale-110 active:scale-95" style="background:#FF7A18" aria-label="Back to top">
+  <i class="fa-solid fa-arrow-up text-white text-sm"></i>
+</button>
+
+<script src="js/nav.js"></script>
+<script src="js/footer.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

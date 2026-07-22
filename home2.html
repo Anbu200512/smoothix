@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Smoothix - Fresh blends, seasonal flavours, and a community that loves wellness.">
+  <title>Smoothix - Seasonal Blends & Wellness Community</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍊</text></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .hero-split-left{clip-path:polygon(0 0,100% 0,85% 100%,0 100%)}
+    .hero-split-right{clip-path:polygon(15% 0,100% 0,100% 100%,0 100%)}
+    @media(max-width:1024px){.hero-split-left,.hero-split-right{clip-path:none}}
+    .plan-card{transition:transform .3s,box-shadow .3s}
+    .plan-card:hover{transform:translateY(-8px);box-shadow:0 25px 50px rgba(0,0,0,.1)}
+    .plan-card.popular{border:2px solid #FF7A18}
+    .event-card{transition:transform .3s}
+    .event-card:hover{transform:translateY(-4px)}
+    .press-logo{filter:grayscale(100%);opacity:.5;transition:all .3s}
+    .press-logo:hover{filter:none;opacity:1}
+    .gift-card{background:linear-gradient(135deg,#FF7A18 0%,#FF7A18 100%)}
+    .season-tag{animation:pulse-glow 2s infinite}
+    @keyframes pulse-glow{0%,100%{box-shadow:0 0 0 0 rgba(255,122,24,.4)}50%{box-shadow:0 0 0 8px rgba(255,122,24,0)}}
+  </style>
+</head>
+<body style="background:var(--body-bg);color:var(--body-text);transition:background .3s,color .3s">
+
+<div id="navbar"></div>
+
+<!-- ═══════════════ RUNNING TICKER ═══════════════ -->
+<div class="mt-16 md:mt-20" style="background:#FF7A18;overflow:hidden;padding:0.625rem 0">
+  <div class="flex whitespace-nowrap animate-marquee">
+    <span class="inline-flex items-center gap-3 px-8 text-sm font-semibold text-white"><i class="fa-solid fa-snowflake"></i> Winter Collection Now Live</span>
+    <span class="inline-flex items-center gap-3 px-8 text-sm font-semibold text-white"><i class="fa-solid fa-mug-hot"></i> Warm Blends from $8.50</span>
+    <span class="inline-flex items-center gap-3 px-8 text-sm font-semibold text-white"><i class="fa-solid fa-leaf"></i> 100% Organic Ingredients</span>
+    <span class="inline-flex items-center gap-3 px-8 text-sm font-semibold text-white"><i class="fa-solid fa-gift"></i> Gift Cards Available</span>
+    <span class="inline-flex items-center gap-3 px-8 text-sm font-semibold text-white"><i class="fa-solid fa-calendar-star"></i> Workshops Every Weekend</span>
+    <span class="inline-flex items-center gap-3 px-8 text-sm font-semibold text-white"><i class="fa-solid fa-truck"></i> Free Delivery on $40+</span>
+    <span class="inline-flex items-center gap-3 px-8 text-sm font-semibold text-white"><i class="fa-solid fa-snowflake"></i> Winter Collection Now Live</span>
+    <span class="inline-flex items-center gap-3 px-8 text-sm font-semibold text-white"><i class="fa-solid fa-mug-hot"></i> Warm Blends from $8.50</span>
+    <span class="inline-flex items-center gap-3 px-8 text-sm font-semibold text-white"><i class="fa-solid fa-leaf"></i> 100% Organic Ingredients</span>
+    <span class="inline-flex items-center gap-3 px-8 text-sm font-semibold text-white"><i class="fa-solid fa-gift"></i> Gift Cards Available</span>
+    <span class="inline-flex items-center gap-3 px-8 text-sm font-semibold text-white"><i class="fa-solid fa-calendar-star"></i> Workshops Every Weekend</span>
+    <span class="inline-flex items-center gap-3 px-8 text-sm font-semibold text-white"><i class="fa-solid fa-truck"></i> Free Delivery on $40+</span>
+  </div>
+</div>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-4 pb-8" style="background:url('https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?w=1920&q=80') center/cover no-repeat;background-attachment:fixed">
+  <div class="absolute inset-0" style="background:linear-gradient(135deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.6) 50%,rgba(0,0,0,.4) 100%)"></div>
+  <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+    <div class="season-tag inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold mb-8 reveal" style="background:rgba(255,122,24,.15);border:1px solid rgba(255,122,24,.3);color:#FF7A18;backdrop-filter:blur(8px)">
+      <span class="w-2 h-2 rounded-full animate-pulse" style="background:#FF7A18"></span> Winter Collection Live
+    </div>
+    <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.05] mb-6 reveal reveal-delay-1" style="color:#fff">
+      Warm Up This<br>Winter With <span style="color:#FF7A18">Flavor.</span>
+    </h1>
+    <p class="text-lg max-w-xl mx-auto mb-10 reveal reveal-delay-2" style="color:rgba(255,255,255,.7)">
+      Ginger-spiced lattes, warm turmeric tonics, and seasonal fruit blends crafted to keep you cozy and healthy all season long.
+    </p>
+    <div class="flex flex-col sm:flex-row items-center gap-4 justify-center reveal reveal-delay-3">
+      <a href="#plans" class="px-8 py-4 rounded-2xl text-sm font-bold text-white transition-all hover:scale-105 active:scale-95" style="background:#FF7A18;box-shadow:0 8px 25px rgba(255,122,24,.4)">See Winter Menu</a>
+      <a href="#events" class="px-8 py-4 rounded-2xl text-sm font-bold text-white transition-all hover:scale-105 active:scale-95 flex items-center gap-2" style="border:2px solid rgba(255,255,255,.35);backdrop-filter:blur(4px)">
+        <i class="fa-solid fa-calendar-days text-xs"></i> Upcoming Events
+      </a>
+    </div>
+    <div class="flex items-center gap-8 mt-12 justify-center reveal reveal-delay-4">
+      <div>
+        <p class="text-2xl font-extrabold" style="color:#FF7A18">4.9</p>
+        <div class="flex items-center gap-0.5 my-1 justify-center">
+          <i class="fa-solid fa-star text-[10px]" style="color:#FF7A18"></i>
+          <i class="fa-solid fa-star text-[10px]" style="color:#FF7A18"></i>
+          <i class="fa-solid fa-star text-[10px]" style="color:#FF7A18"></i>
+          <i class="fa-solid fa-star text-[10px]" style="color:#FF7A18"></i>
+          <i class="fa-solid fa-star text-[10px]" style="color:#FF7A18"></i>
+        </div>
+        <p class="text-xs" style="color:rgba(255,255,255,.6)">8.5k Reviews</p>
+      </div>
+      <div class="w-px h-10" style="background:rgba(255,255,255,.2)"></div>
+      <div>
+        <p class="text-2xl font-extrabold" style="color:#FF7A18">250k+</p>
+        <p class="text-xs mt-2" style="color:rgba(255,255,255,.6)">Blends Served</p>
+      </div>
+      <div class="w-px h-10" style="background:rgba(255,255,255,.2)"></div>
+      <div>
+        <p class="text-2xl font-extrabold" style="color:#FF7A18">3</p>
+        <p class="text-xs mt-2" style="color:rgba(255,255,255,.6)">Locations</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ SEASONAL COLLECTION ═══════════════ -->
+<section class="py-20 sm:py-28" style="background:var(--secondary-bg)">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14">
+      <div class="reveal">
+        <span class="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4" style="background:rgba(255,122,24,.1);color:#FF7A18">Limited Edition</span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold" style="color:var(--nav-text)">Winter <span style="color:#FF7A18">Collection</span></h2>
+        <p class="text-sm mt-3 max-w-lg" style="color:var(--nav-muted)">Seasonal blends crafted with winter's finest ingredients. Available until February 28th.</p>
+      </div>
+      <a href="#" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold transition-all hover:scale-105 active:scale-95 flex-shrink-0 reveal" style="border:2px solid var(--border);color:var(--nav-text)">
+        View All Blends <i class="fa-solid fa-arrow-right text-xs"></i>
+      </a>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-6">
+      <!-- Featured Card -->
+      <div class="group relative rounded-[2rem] overflow-hidden shadow-xl reveal" style="min-height:420px">
+        <img src="https://images.unsplash.com/photo-1577805947697-89e18249d767?w=900&q=80" alt="Golden Ginger Snap" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+        <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(0,0,0,.8) 0%,rgba(0,0,0,.2) 50%,transparent 100%)"></div>
+        <div class="absolute top-5 left-5 px-4 py-1.5 rounded-full text-[10px] font-bold text-white flex items-center gap-1.5" style="background:#FF7A18">
+          <i class="fa-solid fa-fire"></i> Bestseller
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 p-7">
+          <h3 class="font-extrabold text-2xl text-white mb-2">Golden Ginger Snap</h3>
+          <p class="text-sm text-white/70 mb-4">Turmeric + Ginger + Honey + Black Pepper — anti-inflammatory powerhouse.</p>
+          <div class="flex items-center gap-3">
+            <span class="text-2xl font-extrabold" style="color:#FF7A18">$9.00</span>
+            <span class="px-3 py-1 rounded-full text-[10px] font-bold text-white" style="background:rgba(255,255,255,.15);backdrop-filter:blur(4px)">Anti-Inflam</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Side Cards -->
+      <div class="grid gap-6">
+        <div class="group flex flex-col sm:flex-row rounded-[1.5rem] overflow-hidden shadow-lg reveal" style="background:var(--card-bg);border:1px solid var(--border)">
+          <div class="relative w-full sm:w-44 h-44 sm:h-auto flex-shrink-0 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=400&q=80" alt="Cinnamon Fireside" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          </div>
+          <div class="p-5 flex flex-col justify-center">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold text-white" style="background:#FF7A18">Winter</span>
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-semibold" style="background:rgba(255,122,24,.08);color:#FF7A18">Warm</span>
+            </div>
+            <h3 class="font-bold text-base mb-1" style="color:var(--nav-text)">Cinnamon Fireside</h3>
+            <p class="text-xs mb-3" style="color:var(--nav-muted)">Apple + Cinnamon + Clove + Oat Milk</p>
+            <span class="font-extrabold text-lg" style="color:#FF7A18">$8.50</span>
+          </div>
+        </div>
+        <div class="group flex flex-col sm:flex-row rounded-[1.5rem] overflow-hidden shadow-lg reveal reveal-delay-1" style="background:var(--card-bg);border:1px solid var(--border)">
+          <div class="relative w-full sm:w-44 h-44 sm:h-auto flex-shrink-0 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1546173159-315724a31696?w=400&q=80" alt="Peppermint Mocha" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          </div>
+          <div class="p-5 flex flex-col justify-center">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold text-white" style="background:#FF7A18">New</span>
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-semibold" style="background:rgba(255,122,24,.08);color:#FF7A18">Energy</span>
+            </div>
+            <h3 class="font-bold text-base mb-1" style="color:var(--nav-text)">Peppermint Mocha</h3>
+            <p class="text-xs mb-3" style="color:var(--nav-muted)">Cacao + Peppermint + Almond Milk + Espresso</p>
+            <span class="font-extrabold text-lg" style="color:#FF7A18">$10.50</span>
+          </div>
+        </div>
+        <div class="group flex flex-col sm:flex-row rounded-[1.5rem] overflow-hidden shadow-lg reveal reveal-delay-2" style="background:var(--card-bg);border:1px solid var(--border)">
+          <div class="relative w-full sm:w-44 h-44 sm:h-auto flex-shrink-0 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1553530666-ba11a7da3888?w=400&q=80" alt="Chai Spice Bowl" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+          </div>
+          <div class="p-5 flex flex-col justify-center">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold text-white" style="background:#FF7A18">Bowl</span>
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-semibold" style="background:rgba(255,122,24,.08);color:#FF7A18">Comfort</span>
+            </div>
+            <h3 class="font-bold text-base mb-1" style="color:var(--nav-text)">Chai Spice Bowl</h3>
+            <p class="text-xs mb-3" style="color:var(--nav-muted)">Banana + Chai Spices + Granola + Coconut Cream</p>
+            <span class="font-extrabold text-lg" style="color:#FF7A18">$12.00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ BUILD YOUR OWN ═══════════════ -->
+<section class="py-20 sm:py-28" style="background:var(--body-bg)">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14 reveal">
+      <span class="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4" style="background:rgba(255,122,24,.1);color:#FF7A18">Customise</span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold" style="color:var(--nav-text)">Build Your <span style="color:#FF7A18">Own Blend</span></h2>
+      <p class="text-sm mt-3 max-w-lg mx-auto" style="color:var(--nav-muted)">Mix and match from 30+ fresh ingredients. Your blend, your rules.</p>
+    </div>
+
+    <div class="grid md:grid-cols-4 gap-6 relative">
+      <div class="hidden md:block absolute top-16 left-[12%] right-[12%] h-0.5" style="background:linear-gradient(90deg,#FF7A18,#FF7A18,#FF7A18,#FF7A18)"></div>
+
+      <div class="text-center relative reveal">
+        <div class="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-5 text-white font-extrabold text-lg relative z-10" style="background:#FF7A18;box-shadow:0 8px 25px rgba(255,122,24,.35)">1</div>
+        <div class="rounded-2xl p-5 h-full" style="background:var(--card-bg);border:1px solid var(--border)">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4" style="background:rgba(255,122,24,.08)">
+            <i class="fa-solid fa-droplet text-lg" style="color:#FF7A18"></i>
+          </div>
+          <h3 class="font-bold text-sm mb-2" style="color:var(--nav-text)">Pick Your Base</h3>
+          <p class="text-xs leading-relaxed" style="color:var(--nav-muted)">Almond milk, coconut water, oat milk, yogurt, or green juice</p>
+          <div class="flex flex-wrap gap-1.5 justify-center mt-4">
+            <span class="text-[10px] px-2 py-0.5 rounded-full" style="background:rgba(255,122,24,.08);color:#FF7A18">Almond</span>
+            <span class="text-[10px] px-2 py-0.5 rounded-full" style="background:rgba(255,122,24,.08);color:#FF7A18">Oat</span>
+            <span class="text-[10px] px-2 py-0.5 rounded-full" style="background:rgba(255,122,24,.08);color:#FF7A18">Coconut</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center relative reveal reveal-delay-1">
+        <div class="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-5 text-white font-extrabold text-lg relative z-10" style="background:#FF7A18;box-shadow:0 8px 25px rgba(255,122,24,.35)">2</div>
+        <div class="rounded-2xl p-5 h-full" style="background:var(--card-bg);border:1px solid var(--border)">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4" style="background:rgba(255,122,24,.08)">
+            <i class="fa-solid fa-apple-whole text-lg" style="color:#FF7A18"></i>
+          </div>
+          <h3 class="font-bold text-sm mb-2" style="color:var(--nav-text)">Add Fruits</h3>
+          <p class="text-xs leading-relaxed" style="color:var(--nav-muted)">Mango, banana, berries, passion fruit, dragon fruit, and more</p>
+          <div class="flex flex-wrap gap-1.5 justify-center mt-4">
+            <span class="text-[10px] px-2 py-0.5 rounded-full" style="background:rgba(255,122,24,.08);color:#FF7A18">Mango</span>
+            <span class="text-[10px] px-2 py-0.5 rounded-full" style="background:rgba(255,122,24,.08);color:#FF7A18">Berry</span>
+            <span class="text-[10px] px-2 py-0.5 rounded-full" style="background:rgba(255,122,24,.08);color:#FF7A18">Banana</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center relative reveal reveal-delay-2">
+        <div class="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-5 text-white font-extrabold text-lg relative z-10" style="background:#FF7A18;box-shadow:0 8px 25px rgba(255,122,24,.35)">3</div>
+        <div class="rounded-2xl p-5 h-full" style="background:var(--card-bg);border:1px solid var(--border)">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4" style="background:rgba(255,122,24,.08)">
+            <i class="fa-solid fa-leaf text-lg" style="color:#FF7A18"></i>
+          </div>
+          <h3 class="font-bold text-sm mb-2" style="color:var(--nav-text)">Boost It</h3>
+          <p class="text-xs leading-relaxed" style="color:var(--nav-muted)">Spirulina, collagen, protein, maca, probiotics, or hemp seeds</p>
+          <div class="flex flex-wrap gap-1.5 justify-center mt-4">
+            <span class="text-[10px] px-2 py-0.5 rounded-full" style="background:rgba(255,122,24,.08);color:#FF7A18">Spirulina</span>
+            <span class="text-[10px] px-2 py-0.5 rounded-full" style="background:rgba(255,122,24,.08);color:#FF7A18">Protein</span>
+            <span class="text-[10px] px-2 py-0.5 rounded-full" style="background:rgba(255,122,24,.08);color:#FF7A18">Maca</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center relative reveal reveal-delay-3">
+        <div class="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-5 text-white font-extrabold text-lg relative z-10" style="background:#FF7A18;box-shadow:0 8px 25px rgba(255,122,24,.35)">4</div>
+        <div class="rounded-2xl p-5 h-full" style="background:var(--card-bg);border:1px solid var(--border)">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4" style="background:rgba(255,122,24,.08)">
+            <i class="fa-solid fa-cookie text-lg" style="color:#FF7A18"></i>
+          </div>
+          <h3 class="font-bold text-sm mb-2" style="color:var(--nav-text)">Top It Off</h3>
+          <p class="text-xs leading-relaxed" style="color:var(--nav-muted)">Granola, chia seeds, coconut flakes, honey drizzle, or cacao nibs</p>
+          <div class="flex flex-wrap gap-1.5 justify-center mt-4">
+            <span class="text-[10px] px-2 py-0.5 rounded-full" style="background:rgba(255,122,24,.08);color:#FF7A18">Granola</span>
+            <span class="text-[10px] px-2 py-0.5 rounded-full" style="background:rgba(255,122,24,.08);color:#FF7A18">Chia</span>
+            <span class="text-[10px] px-2 py-0.5 rounded-full" style="background:rgba(255,122,24,.08);color:#FF7A18">Honey</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-12 reveal">
+      <a href="#" class="inline-flex items-center gap-2 px-8 py-4 rounded-2xl text-sm font-bold text-white transition-all hover:scale-105 active:scale-95" style="background:#FF7A18;box-shadow:0 8px 25px rgba(255,122,24,.35)">
+        Start Building <i class="fa-solid fa-arrow-right text-xs"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ LOCATIONS ═══════════════ -->
+<section class="py-20 sm:py-28" style="background:var(--secondary-bg)">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14 reveal">
+      <span class="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4" style="background:rgba(255,122,24,.1);color:#FF7A18">Find Us</span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold" style="color:var(--nav-text)">Visit Your Nearest <span style="color:#FF7A18">Smoothix</span></h2>
+      <p class="text-sm mt-3 max-w-lg mx-auto" style="color:var(--nav-muted)">Three locations across the city. Walk in, order ahead, or get it delivered.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="rounded-[1.5rem] overflow-hidden reveal" style="background:var(--card-bg);border:1px solid var(--border)">
+        <div class="relative h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=500&q=80" alt="Downtown Store" class="w-full h-full object-cover">
+          <div class="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-bold text-white" style="background:#FF7A18">Flagship</div>
+        </div>
+        <div class="p-6">
+          <h3 class="font-bold text-base mb-2" style="color:var(--nav-text)">Downtown</h3>
+          <div class="space-y-2">
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-location-dot text-xs" style="color:#FF7A18"></i>
+              <span class="text-xs" style="color:var(--nav-muted)">42 Green Street, SoHo</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-clock text-xs" style="color:#FF7A18"></i>
+              <span class="text-xs" style="color:var(--nav-muted)">Mon–Sun: 6 AM – 10 PM</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-phone text-xs" style="color:#FF7A18"></i>
+              <span class="text-xs" style="color:var(--nav-muted)">(212) 555-0101</span>
+            </div>
+          </div>
+          <a href="#" class="inline-flex items-center gap-2 mt-4 text-xs font-bold" style="color:#FF7A18">Get Directions <i class="fa-solid fa-arrow-right text-[10px]"></i></a>
+        </div>
+      </div>
+      <div class="rounded-[1.5rem] overflow-hidden reveal reveal-delay-1" style="background:var(--card-bg);border:1px solid var(--border)">
+        <div class="relative h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1559329007-40df8a9345d8?w=500&q=80" alt="Midtown Store" class="w-full h-full object-cover">
+          <div class="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-bold text-white" style="background:#FF7A18">Busiest</div>
+        </div>
+        <div class="p-6">
+          <h3 class="font-bold text-base mb-2" style="color:var(--nav-text)">Midtown</h3>
+          <div class="space-y-2">
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-location-dot text-xs" style="color:#FF7A18"></i>
+              <span class="text-xs" style="color:var(--nav-muted)">188 Wellness Ave, Midtown</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-clock text-xs" style="color:#FF7A18"></i>
+              <span class="text-xs" style="color:var(--nav-muted)">Mon–Sun: 7 AM – 9 PM</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-phone text-xs" style="color:#FF7A18"></i>
+              <span class="text-xs" style="color:var(--nav-muted)">(212) 555-0202</span>
+            </div>
+          </div>
+          <a href="#" class="inline-flex items-center gap-2 mt-4 text-xs font-bold" style="color:#FF7A18">Get Directions <i class="fa-solid fa-arrow-right text-[10px]"></i></a>
+        </div>
+      </div>
+      <div class="rounded-[1.5rem] overflow-hidden reveal reveal-delay-2" style="background:var(--card-bg);border:1px solid var(--border)">
+        <div class="relative h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1567521464027-f127ff144326?w=500&q=80" alt="Brooklyn Store" class="w-full h-full object-cover">
+          <div class="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-bold text-white" style="background:#FF7A18">Cozy</div>
+        </div>
+        <div class="p-6">
+          <h3 class="font-bold text-base mb-2" style="color:var(--nav-text)">Brooklyn</h3>
+          <div class="space-y-2">
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-location-dot text-xs" style="color:#FF7A18"></i>
+              <span class="text-xs" style="color:var(--nav-muted)">75 Orchard Lane, Williamsburg</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-clock text-xs" style="color:#FF7A18"></i>
+              <span class="text-xs" style="color:var(--nav-muted)">Mon–Sun: 8 AM – 8 PM</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-phone text-xs" style="color:#FF7A18"></i>
+              <span class="text-xs" style="color:var(--nav-muted)">(212) 555-0303</span>
+            </div>
+          </div>
+          <a href="#" class="inline-flex items-center gap-2 mt-4 text-xs font-bold" style="color:#FF7A18">Get Directions <i class="fa-solid fa-arrow-right text-[10px]"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ EVENTS & WORKSHOPS ═══════════════ -->
+<section id="events" class="py-20 sm:py-28" style="background:var(--body-bg)">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14 reveal">
+      <span class="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4" style="background:rgba(255,122,24,.1);color:#FF7A18">Events & Workshops</span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold" style="color:var(--nav-text)">Learn, Sip, <span style="color:#FF7A18">Connect</span></h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="event-card rounded-[1.5rem] overflow-hidden reveal" style="background:var(--card-bg);border:1px solid var(--border)">
+        <div class="relative h-44 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&q=80" alt="Juice Cleansing 101" class="w-full h-full object-cover">
+          <div class="absolute top-3 right-3 px-3 py-1 rounded-full text-[10px] font-bold text-white" style="background:#FF7A18">Jan 18</div>
+        </div>
+        <div class="p-5">
+          <span class="text-[10px] font-bold px-2 py-0.5 rounded-full mb-3 inline-block" style="background:rgba(255,122,24,.08);color:#FF7A18">Workshop</span>
+          <h3 class="font-bold text-base mb-2" style="color:var(--nav-text)">Juice Cleansing 101</h3>
+          <p class="text-xs mb-4" style="color:var(--nav-muted)">Learn the science behind juice cleanses and how to do them safely. Free tasting included.</p>
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold" style="color:#FF7A18">Free Entry</span>
+            <span class="text-xs" style="color:var(--nav-muted)">6:00 PM</span>
+          </div>
+        </div>
+      </div>
+      <div class="event-card rounded-[1.5rem] overflow-hidden reveal reveal-delay-1" style="background:var(--card-bg);border:1px solid var(--border)">
+        <div class="relative h-44 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=500&q=80" alt="Smoothie Bowl Art" class="w-full h-full object-cover">
+          <div class="absolute top-3 right-3 px-3 py-1 rounded-full text-[10px] font-bold text-white" style="background:#FF7A18">Jan 25</div>
+        </div>
+        <div class="p-5">
+          <span class="text-[10px] font-bold px-2 py-0.5 rounded-full mb-3 inline-block" style="background:rgba(255,122,24,.08);color:#FF7A18">Class</span>
+          <h3 class="font-bold text-base mb-2" style="color:var(--nav-text)">Smoothie Bowl Art Class</h3>
+          <p class="text-xs mb-4" style="color:var(--nav-muted)">Master the art of Instagram-worthy smoothie bowls. Take home your creation and a recipe book.</p>
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold" style="color:#FF7A18">$15 / person</span>
+            <span class="text-xs" style="color:var(--nav-muted)">2:00 PM</span>
+          </div>
+        </div>
+      </div>
+      <div class="event-card rounded-[1.5rem] overflow-hidden reveal reveal-delay-2" style="background:var(--card-bg);border:1px solid var(--border)">
+        <div class="relative h-44 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500&q=80" alt="Farm Visit Day" class="w-full h-full object-cover">
+          <div class="absolute top-3 right-3 px-3 py-1 rounded-full text-[10px] font-bold text-white" style="background:#FF7A18">Feb 01</div>
+        </div>
+        <div class="p-5">
+          <span class="text-[10px] font-bold px-2 py-0.5 rounded-full mb-3 inline-block" style="background:rgba(255,122,24,.08);color:#FF7A18">Community</span>
+          <h3 class="font-bold text-base mb-2" style="color:var(--nav-text)">Farm Visit Day</h3>
+          <p class="text-xs mb-4" style="color:var(--nav-muted)">Visit our partner organic farm, pick your own fruits, and see where your ingredients come from.</p>
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-semibold" style="color:#FF7A18">$25 / person</span>
+            <span class="text-xs" style="color:var(--nav-muted)">9:00 AM</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ WELLNESS PROMISE ═══════════════ -->
+<section class="py-20 sm:py-28" style="background:var(--secondary-bg)">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14 reveal">
+      <span class="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4" style="background:rgba(255,122,24,.1);color:#FF7A18">Our Promise</span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold" style="color:var(--nav-text)">Why People <span style="color:#FF7A18">Trust Us</span></h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="p-7 rounded-[1.5rem] reveal" style="background:var(--card-bg);border:1px solid var(--border)">
+        <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-5" style="background:linear-gradient(135deg,rgba(255,122,24,.1),rgba(255,122,24,.05))">
+          <i class="fa-solid fa-tractor text-xl" style="color:#FF7A18"></i>
+        </div>
+        <h3 class="font-bold text-base mb-2" style="color:var(--nav-text)">Farm Direct Sourcing</h3>
+        <p class="text-sm leading-relaxed" style="color:var(--nav-muted)">We partner with 12 local organic farms. Every ingredient travels less than 50 miles from soil to cup — guaranteed freshness in every blend.</p>
+        <div class="mt-5 pt-5" style="border-top:1px solid var(--border)">
+          <div class="flex items-center gap-2">
+            <span class="text-2xl font-extrabold" style="color:#FF7A18">12</span>
+            <span class="text-xs" style="color:var(--nav-muted)">Partner farms within 50 miles</span>
+          </div>
+        </div>
+      </div>
+      <div class="p-7 rounded-[1.5rem] reveal reveal-delay-1" style="background:var(--card-bg);border:1px solid var(--border)">
+        <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-5" style="background:linear-gradient(135deg,rgba(255,122,24,.1),rgba(255,122,24,.05))">
+          <i class="fa-solid fa-temperature-half text-xl" style="color:#FF7A18"></i>
+        </div>
+        <h3 class="font-bold text-base mb-2" style="color:var(--nav-text)">Cold-Pressed Daily</h3>
+        <p class="text-sm leading-relaxed" style="color:var(--nav-muted)">Every blend is cold-pressed fresh each morning. No sitting in fridges, no batch processing — your drink is made the moment you order it.</p>
+        <div class="mt-5 pt-5" style="border-top:1px solid var(--border)">
+          <div class="flex items-center gap-2">
+            <span class="text-2xl font-extrabold" style="color:#FF7A18">0</span>
+            <span class="text-xs" style="color:var(--nav-muted)">Hours stored before serving</span>
+          </div>
+        </div>
+      </div>
+      <div class="p-7 rounded-[1.5rem] reveal reveal-delay-2" style="background:var(--card-bg);border:1px solid var(--border)">
+        <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-5" style="background:linear-gradient(135deg,rgba(255,122,24,.1),rgba(255,122,24,.05))">
+          <i class="fa-solid fa-hand-holding-heart text-xl" style="color:#FF7A18"></i>
+        </div>
+        <h3 class="font-bold text-base mb-2" style="color:var(--nav-text)">Satisfaction Promise</h3>
+        <p class="text-sm leading-relaxed" style="color:var(--nav-muted)">Don't love your blend? We'll remake it free — no questions asked. That's our guarantee on every single order, every single time.</p>
+        <div class="mt-5 pt-5" style="border-top:1px solid var(--border)">
+          <div class="flex items-center gap-2">
+            <span class="text-2xl font-extrabold" style="color:#FF7A18">100%</span>
+            <span class="text-xs" style="color:var(--nav-muted)">Free remake guarantee</span>
+          </div>
+        </div>
+      </div>
+      <div class="p-7 rounded-[1.5rem] reveal" style="background:var(--card-bg);border:1px solid var(--border)">
+        <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-5" style="background:linear-gradient(135deg,rgba(255,122,24,.1),rgba(255,122,24,.05))">
+          <i class="fa-solid fa-recycle text-xl" style="color:#FF7A18"></i>
+        </div>
+        <h3 class="font-bold text-base mb-2" style="color:var(--nav-text)">Zero Waste Packaging</h3>
+        <p class="text-sm leading-relaxed" style="color:var(--nav-muted)">All cups, straws, and containers are 100% compostable. Bring your own cup and get $1 off every order — it's that simple.</p>
+        <div class="mt-5 pt-5" style="border-top:1px solid var(--border)">
+          <div class="flex items-center gap-2">
+            <span class="text-2xl font-extrabold" style="color:#FF7A18">$1</span>
+            <span class="text-xs" style="color:var(--nav-muted)">Discount for reusable cups</span>
+          </div>
+        </div>
+      </div>
+      <div class="p-7 rounded-[1.5rem] reveal reveal-delay-1" style="background:var(--card-bg);border:1px solid var(--border)">
+        <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-5" style="background:linear-gradient(135deg,rgba(255,122,24,.1),rgba(255,122,24,.05))">
+          <i class="fa-solid fa-users text-xl" style="color:#FF7A18"></i>
+        </div>
+        <h3 class="font-bold text-base mb-2" style="color:var(--nav-text)">Community First</h3>
+        <p class="text-sm leading-relaxed" style="color:var(--nav-muted)">5% of every sale goes to local schools and food banks. When you sip with us, you're feeding families in your neighbourhood.</p>
+        <div class="mt-5 pt-5" style="border-top:1px solid var(--border)">
+          <div class="flex items-center gap-2">
+            <span class="text-2xl font-extrabold" style="color:#FF7A18">$120k</span>
+            <span class="text-xs" style="color:var(--nav-muted)">Donated to local charities</span>
+          </div>
+        </div>
+      </div>
+      <div class="p-7 rounded-[1.5rem] reveal reveal-delay-2" style="background:var(--card-bg);border:1px solid var(--border)">
+        <div class="w-14 h-14 rounded-2xl flex items-center justify-center mb-5" style="background:linear-gradient(135deg,rgba(255,122,24,.1),rgba(255,122,24,.05))">
+          <i class="fa-solid fa-certificate text-xl" style="color:#FF7A18"></i>
+        </div>
+        <h3 class="font-bold text-base mb-2" style="color:var(--nav-text)">Certified Organic</h3>
+        <p class="text-sm leading-relaxed" style="color:var(--nav-muted)">USDA Organic certified since day one. No pesticides, no GMOs, no artificial anything — just clean, honest ingredients you can trust.</p>
+        <div class="mt-5 pt-5" style="border-top:1px solid var(--border)">
+          <div class="flex items-center gap-2">
+            <span class="text-2xl font-extrabold" style="color:#FF7A18">USDA</span>
+            <span class="text-xs" style="color:var(--nav-muted)">Certified organic since 2018</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ COMMUNITY STATS ═══════════════ -->
+<section class="py-20 sm:py-28" style="background:var(--body-bg)">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14 reveal">
+      <span class="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4" style="background:rgba(255,122,24,.1);color:#FF7A18">Our Community</span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold" style="color:var(--nav-text)">Growing <span style="color:#FF7A18">Together</span></h2>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="text-center p-6 rounded-[1.5rem] reveal" style="background:var(--card-bg);border:1px solid var(--border)">
+        <div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4" style="background:rgba(255,122,24,.1)">
+          <i class="fa-solid fa-users text-xl" style="color:#FF7A18"></i>
+        </div>
+        <p class="text-3xl font-extrabold counter" data-target="15000" style="color:#FF7A18">0</p>
+        <p class="text-xs mt-1" style="color:var(--nav-muted)">Community Members</p>
+      </div>
+      <div class="text-center p-6 rounded-[1.5rem] reveal reveal-delay-1" style="background:var(--card-bg);border:1px solid var(--border)">
+        <div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4" style="background:rgba(255,122,24,.1)">
+          <i class="fa-solid fa-heart text-xl" style="color:#FF7A18"></i>
+        </div>
+        <p class="text-3xl font-extrabold counter" data-target="8500" style="color:#FF7A18">0</p>
+        <p class="text-xs mt-1" style="color:var(--nav-muted)">5-Star Reviews</p>
+      </div>
+      <div class="text-center p-6 rounded-[1.5rem] reveal reveal-delay-2" style="background:var(--card-bg);border:1px solid var(--border)">
+        <div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4" style="background:rgba(255,122,24,.1)">
+          <i class="fa-solid fa-glass-water text-xl" style="color:#FF7A18"></i>
+        </div>
+        <p class="text-3xl font-extrabold counter" data-target="250000" style="color:#FF7A18">0</p>
+        <p class="text-xs mt-1" style="color:var(--nav-muted)">Blends Served</p>
+      </div>
+      <div class="text-center p-6 rounded-[1.5rem] reveal reveal-delay-3" style="background:var(--card-bg);border:1px solid var(--border)">
+        <div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4" style="background:rgba(255,122,24,.1)">
+          <i class="fa-solid fa-store text-xl" style="color:#FF7A18"></i>
+        </div>
+        <p class="text-3xl font-extrabold counter" data-target="3" style="color:#FF7A18">0</p>
+        <p class="text-xs mt-1" style="color:var(--nav-muted)">Store Locations</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ TESTIMONIALS ═══════════════ -->
+<section class="py-20 sm:py-28" style="background:var(--body-bg)">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14 reveal">
+      <span class="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4" style="background:rgba(255,122,24,.1);color:#FF7A18">Reviews</span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold" style="color:var(--nav-text)">Loved by <span style="color:#FF7A18">Thousands</span></h2>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="p-6 rounded-[1.5rem] transition-all hover:-translate-y-1 hover:shadow-xl reveal" style="background:var(--card-bg);border:1px solid var(--border)">
+        <div class="flex items-center gap-1 mb-4">
+          <i class="fa-solid fa-star text-xs" style="color:#FF7A18"></i>
+          <i class="fa-solid fa-star text-xs" style="color:#FF7A18"></i>
+          <i class="fa-solid fa-star text-xs" style="color:#FF7A18"></i>
+          <i class="fa-solid fa-star text-xs" style="color:#FF7A18"></i>
+          <i class="fa-solid fa-star text-xs" style="color:#FF7A18"></i>
+        </div>
+        <p class="text-sm mb-6 leading-relaxed" style="color:var(--nav-muted)">"The subscription is a game-changer. I save money and I'm actually consistent with my nutrition now. The Evergreen plan pays for itself in two visits."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="David" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <p class="font-bold text-sm" style="color:var(--nav-text)">David Park</p>
+            <p class="text-xs" style="color:var(--nav-muted)">Subscriber since 2023</p>
+          </div>
+        </div>
+      </div>
+      <div class="p-6 rounded-[1.5rem] transition-all hover:-translate-y-1 hover:shadow-xl reveal reveal-delay-1" style="background:var(--card-bg);border:1px solid var(--border)">
+        <div class="flex items-center gap-1 mb-4">
+          <i class="fa-solid fa-star text-xs" style="color:#FF7A18"></i>
+          <i class="fa-solid fa-star text-xs" style="color:#FF7A18"></i>
+          <i class="fa-solid fa-star text-xs" style="color:#FF7A18"></i>
+          <i class="fa-solid fa-star text-xs" style="color:#FF7A18"></i>
+          <i class="fa-solid fa-star text-xs" style="color:#FF7A18"></i>
+        </div>
+        <p class="text-sm mb-6 leading-relaxed" style="color:var(--nav-muted)">"Bought a gift card for my mum's birthday and she's now a regular! The smoothie bowl art class was the best gift I've ever received. So creative!"</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Emma" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <p class="font-bold text-sm" style="color:var(--nav-text)">Emma Roberts</p>
+            <p class="text-xs" style="color:var(--nav-muted)">Workshop Attendee</p>
+          </div>
+        </div>
+      </div>
+      <div class="p-6 rounded-[1.5rem] transition-all hover:-translate-y-1 hover:shadow-xl reveal reveal-delay-2" style="background:var(--card-bg);border:1px solid var(--border)">
+        <div class="flex items-center gap-1 mb-4">
+          <i class="fa-solid fa-star text-xs" style="color:#FF7A18"></i>
+          <i class="fa-solid fa-star text-xs" style="color:#FF7A18"></i>
+          <i class="fa-solid fa-star text-xs" style="color:#FF7A18"></i>
+          <i class="fa-solid fa-star text-xs" style="color:#FF7A18"></i>
+          <i class="fa-solid fa-star text-xs" style="color:#FF7A18"></i>
+        </div>
+        <p class="text-sm mb-6 leading-relaxed" style="color:var(--nav-muted)">"The farm visit day was incredible. My kids loved picking strawberries and seeing where real food comes from. We've been back three times since!"</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Lisa" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <p class="font-bold text-sm" style="color:var(--nav-text)">Lisa Nguyen</p>
+            <p class="text-xs" style="color:var(--nav-muted)">Community Member</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ FRESH DAILY ═══════════════ -->
+<section class="py-20 sm:py-28" style="background:var(--body-bg)">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="relative rounded-[2rem] overflow-hidden">
+      <img src="https://images.unsplash.com/photo-1490645935967-10de6ba1506c?w=1400&q=80" alt="Fresh Ingredients" class="w-full h-[400px] sm:h-[500px] object-cover">
+      <div class="absolute inset-0" style="background:linear-gradient(135deg,rgba(0,0,0,.85) 0%,rgba(0,0,0,.5) 50%,rgba(0,0,0,.3) 100%)"></div>
+      <div class="absolute inset-0 p-8 sm:p-12 lg:p-16 flex flex-col justify-between">
+        <div class="reveal">
+          <span class="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4" style="background:rgba(255,122,24,.2);color:#FF7A18">From Farm to Cup</span>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white max-w-lg">Fresh <span style="color:#FF7A18">Ingredients</span> Every Single Day.</h2>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 reveal reveal-delay-1">
+          <div class="p-4 rounded-xl" style="background:rgba(255,255,255,.1);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.15)">
+            <p class="text-2xl font-extrabold" style="color:#FF7A18">5 AM</p>
+            <p class="text-xs text-white/70 mt-1">Daily sourcing begins</p>
+          </div>
+          <div class="p-4 rounded-xl" style="background:rgba(255,255,255,.1);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.15)">
+            <p class="text-2xl font-extrabold" style="color:#FF7A18">50 mi</p>
+            <p class="text-xs text-white/70 mt-1">Max farm distance</p>
+          </div>
+          <div class="p-4 rounded-xl" style="background:rgba(255,255,255,.1);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.15)">
+            <p class="text-2xl font-extrabold" style="color:#FF7A18">0</p>
+            <p class="text-xs text-white/70 mt-1">Preservatives used</p>
+          </div>
+          <div class="p-4 rounded-xl" style="background:rgba(255,255,255,.1);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.15)">
+            <p class="text-2xl font-extrabold" style="color:#FF7A18">100%</p>
+            <p class="text-xs text-white/70 mt-1">Organic certified</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="footer"></div>
+
+<button id="backToTop" class="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full shadow-xl flex items-center justify-center transition-all duration-300 opacity-0 invisible hover:scale-110 active:scale-95" style="background:#FF7A18" aria-label="Back to top">
+  <i class="fa-solid fa-arrow-up text-white text-sm"></i>
+</button>
+
+<script src="js/nav.js"></script>
+<script src="js/footer.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

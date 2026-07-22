@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Smoothix Office Catering - Fresh juices, smoothies, and healthy snack platters for your team, events, and meetings.">
+  <title>Office Catering - Smoothix</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍊</text></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body style="background:var(--body-bg);color:var(--body-text);transition:background .3s,color .3s">
+
+<div id="navbar"></div>
+
+<!-- HERO -->
+<section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden" style="background:url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=1920&q=80') center/cover no-repeat;background-attachment:fixed">
+  <div class="absolute inset-0" style="background:linear-gradient(135deg,rgba(0,0,0,.85) 0%,rgba(0,0,0,.6) 100%)"></div>
+  <div class="relative z-10 text-center px-4 py-20">
+    <span class="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4 reveal" style="background:rgba(255,122,24,.15);border:1px solid rgba(255,122,24,.3);color:#FF7A18">Office Catering</span>
+    <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold mb-4 reveal reveal-delay-1" style="color:#fff">Fresh Juices for <span style="color:#FF7A18">Your Team</span></h1>
+    <p class="text-lg max-w-xl mx-auto reveal reveal-delay-2" style="color:rgba(255,255,255,.7)">Keep your team energized with our corporate catering. Fresh smoothies, juice flights, and healthy snack platters delivered to your office.</p>
+  </div>
+</section>
+
+<!-- CATERING INFO -->
+<section class="py-20 sm:py-28" style="background:var(--secondary-bg)">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+      <!-- Left: Image + Info -->
+      <div class="reveal">
+        <div class="rounded-[2rem] overflow-hidden shadow-2xl mb-8">
+          <img src="https://images.unsplash.com/photo-1555244162-803834f70033?w=800&q=80" alt="Catering" class="w-full h-[350px] object-cover">
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold mb-4" style="color:var(--nav-text)">Why Choose <span style="color:#FF7A18">Smoothix Catering?</span></h2>
+        <p class="text-base mb-6 max-w-lg" style="color:var(--nav-muted)">From weekly office juice plans to one-time event catering, we've got you covered. Everything is made fresh and delivered on time.</p>
+        <div class="flex flex-wrap gap-3">
+          <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full" style="background:var(--card-bg);border:1px solid var(--border);color:var(--nav-text)"><i class="fa-solid fa-truck" style="color:#FF7A18"></i> Free delivery on $100+</span>
+          <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full" style="background:var(--card-bg);border:1px solid var(--border);color:var(--nav-text)"><i class="fa-solid fa-sliders" style="color:#FF7A18"></i> Custom menus</span>
+          <span class="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full" style="background:var(--card-bg);border:1px solid var(--border);color:var(--nav-text)"><i class="fa-solid fa-receipt" style="color:#FF7A18"></i> Monthly invoicing</span>
+        </div>
+      </div>
+      <!-- Right: Form -->
+      <div class="reveal reveal-delay-2">
+        <div class="rounded-2xl p-6 sm:p-8" style="background:var(--card-bg);border:1px solid var(--border)">
+          <h3 class="font-bold text-xl mb-6" style="color:var(--nav-text)">Request a Catering Quote</h3>
+          <form class="sm-form space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div><label class="block text-xs font-semibold mb-1.5" style="color:var(--nav-muted)">Full Name *</label><input type="text" required placeholder="John Smith" class="w-full px-4 py-3 rounded-xl text-sm transition-all focus:outline-none focus:ring-2" style="background:var(--secondary-bg);border:1px solid var(--border);color:var(--body-text)"></div>
+              <div><label class="block text-xs font-semibold mb-1.5" style="color:var(--nav-muted)">Email *</label><input type="email" required placeholder="john@company.com" class="w-full px-4 py-3 rounded-xl text-sm transition-all focus:outline-none focus:ring-2" style="background:var(--secondary-bg);border:1px solid var(--border);color:var(--body-text)"></div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div><label class="block text-xs font-semibold mb-1.5" style="color:var(--nav-muted)">Company *</label><input type="text" required placeholder="Acme Corp" class="w-full px-4 py-3 rounded-xl text-sm transition-all focus:outline-none focus:ring-2" style="background:var(--secondary-bg);border:1px solid var(--border);color:var(--body-text)"></div>
+              <div><label class="block text-xs font-semibold mb-1.5" style="color:var(--nav-muted)">Team Size *</label><select required class="w-full px-4 py-3 rounded-xl text-sm transition-all focus:outline-none focus:ring-2" style="background:var(--secondary-bg);border:1px solid var(--border);color:var(--nav-muted)"><option value="">Select range</option><option>10 - 25 people</option><option>26 - 50 people</option><option>51 - 100 people</option><option>100+ people</option></select></div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div><label class="block text-xs font-semibold mb-1.5" style="color:var(--nav-muted)">Event Date *</label><input type="date" required class="w-full px-4 py-3 rounded-xl text-sm transition-all focus:outline-none focus:ring-2" style="background:var(--secondary-bg);border:1px solid var(--border);color:var(--body-text)"></div>
+              <div><label class="block text-xs font-semibold mb-1.5" style="color:var(--nav-muted)">Budget Range</label><select class="w-full px-4 py-3 rounded-xl text-sm transition-all focus:outline-none focus:ring-2" style="background:var(--secondary-bg);border:1px solid var(--border);color:var(--nav-muted)"><option value="">Select range</option><option>$100 - $250</option><option>$250 - $500</option><option>$500 - $1,000</option><option>$1,000+</option></select></div>
+            </div>
+            <div><label class="block text-xs font-semibold mb-1.5" style="color:var(--nav-muted)">Special Requirements</label><textarea rows="3" placeholder="Dietary restrictions, allergies, preferences..." class="w-full px-4 py-3 rounded-xl text-sm transition-all focus:outline-none focus:ring-2 resize-none" style="background:var(--secondary-bg);border:1px solid var(--border);color:var(--body-text)"></textarea></div>
+            <button type="submit" class="w-full py-3.5 rounded-xl text-sm font-bold text-white shadow-lg transition-all hover:scale-[1.02] active:scale-95" style="background:#FF7A18"><i class="fa-solid fa-paper-plane mr-2"></i> Send Enquiry</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section class="py-20 sm:py-28" style="background:var(--body-bg)">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-14 reveal">
+      <span class="inline-block px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-4" style="background:rgba(255,122,24,.1);color:#FF7A18">Catering Packages</span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold" style="color:var(--nav-text)">Popular <span style="color:#FF7A18">Packages</span></h2>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="card-lift rounded-2xl overflow-hidden reveal" style="background:var(--card-bg);border:1px solid var(--border)">
+        <div class="h-48 overflow-hidden"><img src="https://images.unsplash.com/photo-1610970881699-44a5587cabec?w=600&q=80" alt="Starter Pack" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"></div>
+        <div class="p-6">
+          <h3 class="font-bold text-lg mb-2" style="color:var(--nav-text)">Starter Pack</h3>
+          <p class="text-sm mb-4" style="color:var(--nav-muted)">Perfect for small teams of 10-25 people.</p>
+          <ul class="space-y-2 mb-5"><li class="flex items-center gap-2 text-sm" style="color:var(--nav-muted)"><i class="fa-solid fa-check text-[10px]" style="color:#FF7A18"></i>10-25 drinks</li><li class="flex items-center gap-2 text-sm" style="color:var(--nav-muted)"><i class="fa-solid fa-check text-[10px]" style="color:#FF7A18"></i>Mixed menu selection</li><li class="flex items-center gap-2 text-sm" style="color:var(--nav-muted)"><i class="fa-solid fa-check text-[10px]" style="color:#FF7A18"></i>Free delivery</li></ul>
+          <div class="pt-4 flex items-end justify-between" style="border-top:1px solid var(--border)"><span class="text-2xl font-extrabold" style="color:#FF7A18">$4.99</span><span class="text-sm" style="color:var(--nav-muted)">/ person</span></div>
+        </div>
+      </div>
+      <div class="card-lift rounded-2xl overflow-hidden relative reveal reveal-delay-1" style="background:var(--card-bg);border:2px solid #FF7A18">
+        <div class="absolute top-0 right-0 bg-[#FF7A18] text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl z-10">Most Popular</div>
+        <div class="h-48 overflow-hidden"><img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=600&q=80" alt="Team Boost" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"></div>
+        <div class="p-6">
+          <h3 class="font-bold text-lg mb-2" style="color:var(--nav-text)">Team Boost</h3>
+          <p class="text-sm mb-4" style="color:var(--nav-muted)">Great for medium teams of 26-50 people.</p>
+          <ul class="space-y-2 mb-5"><li class="flex items-center gap-2 text-sm" style="color:var(--nav-muted)"><i class="fa-solid fa-check text-[10px]" style="color:#FF7A18"></i>26-50 drinks</li><li class="flex items-center gap-2 text-sm" style="color:var(--nav-muted)"><i class="fa-solid fa-check text-[10px]" style="color:#FF7A18"></i>Snack platters included</li><li class="flex items-center gap-2 text-sm" style="color:var(--nav-muted)"><i class="fa-solid fa-check text-[10px]" style="color:#FF7A18"></i>Free delivery + setup</li></ul>
+          <div class="pt-4 flex items-end justify-between" style="border-top:1px solid var(--border)"><span class="text-2xl font-extrabold" style="color:#FF7A18">$3.99</span><span class="text-sm" style="color:var(--nav-muted)">/ person</span></div>
+        </div>
+      </div>
+      <div class="card-lift rounded-2xl overflow-hidden reveal reveal-delay-2" style="background:var(--card-bg);border:1px solid var(--border)">
+        <div class="h-48 overflow-hidden"><img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&q=80" alt="Executive Suite" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110"></div>
+        <div class="p-6">
+          <h3 class="font-bold text-lg mb-2" style="color:var(--nav-text)">Executive Suite</h3>
+          <p class="text-sm mb-4" style="color:var(--nav-muted)">Premium package for 50-100+ people.</p>
+          <ul class="space-y-2 mb-5"><li class="flex items-center gap-2 text-sm" style="color:var(--nav-muted)"><i class="fa-solid fa-check text-[10px]" style="color:#6C63FF"></i>50-100+ drinks</li><li class="flex items-center gap-2 text-sm" style="color:var(--nav-muted)"><i class="fa-solid fa-check text-[10px]" style="color:#6C63FF"></i>Full menu + custom options</li><li class="flex items-center gap-2 text-sm" style="color:var(--nav-muted)"><i class="fa-solid fa-check text-[10px]" style="color:#6C63FF"></i>Dedicated event manager</li></ul>
+          <div class="pt-4 flex items-end justify-between" style="border-top:1px solid var(--border)"><span class="text-2xl font-extrabold" style="color:#6C63FF">$2.99</span><span class="text-sm" style="color:var(--nav-muted)">/ person</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="py-20 sm:py-28" style="background:var(--secondary-bg)">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+    <div class="rounded-3xl p-8 sm:p-12" style="background:var(--card-bg);border:1px solid var(--border)">
+      <div class="flex items-center justify-center gap-1 mb-4"><i class="fa-solid fa-star text-sm" style="color:#FF7A18"></i><i class="fa-solid fa-star text-sm" style="color:#FF7A18"></i><i class="fa-solid fa-star text-sm" style="color:#FF7A18"></i><i class="fa-solid fa-star text-sm" style="color:#FF7A18"></i><i class="fa-solid fa-star text-sm" style="color:#FF7A18"></i></div>
+      <p class="text-lg leading-relaxed mb-6 max-w-2xl mx-auto" style="color:var(--nav-muted)">"We order Smoothix catering for our team every Friday. The variety is incredible, everything arrives fresh, and our employees absolutely love it. It's become the highlight of our work week."</p>
+      <div class="flex items-center justify-center gap-3"><div class="w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-sm" style="background:#6C63FF">MR</div><div class="text-left"><p class="font-bold text-sm" style="color:var(--nav-text)">Michael R.</p><p class="text-xs" style="color:var(--nav-muted)">Office Manager, TechCorp</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-20 sm:py-24" style="background:#FF7A18">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal">
+    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-5">Ready to Cater Your Event?</h2>
+    <p class="text-lg text-white/70 mb-8 max-w-2xl mx-auto">Get a free custom quote within 24 hours. We handle everything so you can focus on your event.</p>
+    <a href="contact.html" class="inline-flex items-center gap-2 bg-white font-bold px-8 py-3.5 rounded-xl text-sm transition-all hover:scale-105 active:scale-95 shadow-lg" style="color:#FF7A18"><i class="fa-solid fa-phone"></i> Contact Us</a>
+  </div>
+</section>
+
+<div id="footer"></div>
+<button id="backToTop" class="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full shadow-xl flex items-center justify-center transition-all duration-300 opacity-0 invisible hover:scale-110 active:scale-95" style="background:#FF7A18" aria-label="Back to top"><i class="fa-solid fa-arrow-up text-white text-sm"></i></button>
+
+<script src="js/nav.js"></script>
+<script src="js/footer.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

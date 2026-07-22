@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sign up for Smoothix - Create your account and start earning rewards on every blend.">
+  <title>Sign Up - Smoothix</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍊</text></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Poppins', sans-serif; overflow-x: hidden; transition: background .3s, color .3s; }
+  </style>
+</head>
+<body style="background:var(--body-bg);color:var(--body-text)">
+
+<!-- MINIMAL NAV -->
+<nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" style="background:var(--nav-bg);border-bottom:1px solid var(--border);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 md:h-20">
+      <a href="index.html" class="flex items-center gap-2.5 group flex-shrink-0" aria-label="Smoothix Home">
+        <div class="w-10 h-10 md:w-11 md:h-11 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-105 shadow-md" style="background:#FF7A18">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z"/>
+            <path d="M8 12c0-2.2 1.8-4 4-4s4 1.8 4 4"/>
+            <circle cx="12" cy="12" r="1.5" fill="white"/>
+          </svg>
+        </div>
+        <div class="hidden sm:block">
+          <span class="font-extrabold text-lg md:text-xl tracking-tight" style="color:var(--nav-text)">SMOOTH<span style="color:#FF7A18">IX</span></span>
+          <span class="block text-[10px] uppercase tracking-[0.25em] font-medium" style="color:var(--nav-muted)">Juice & Smoothie Bar</span>
+        </div>
+      </a>
+      <div class="flex items-center gap-3">
+        
+        <button id="themeToggle" class="w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95" style="background:var(--secondary-bg);border:1px solid var(--border);color:var(--nav-muted)" title="Toggle Dark Mode" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon text-sm"></i>
+        </button>
+        <button id="rtlToggle" class="w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95" style="background:var(--secondary-bg);border:1px solid var(--border);color:var(--nav-muted)" title="Toggle RTL" aria-label="Toggle text direction">
+          <i class="fa-solid fa-arrow-right-arrow-left text-sm"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- SIGNUP SECTION -->
+<section class="min-h-screen flex items-center justify-center px-4 py-24" style="background:var(--body-bg)">
+  <div class="w-full max-w-4xl reveal">
+    <div class="rounded-[2rem] overflow-hidden shadow-2xl flex flex-col lg:flex-row" style="background:var(--card-bg);border:1px solid var(--border)">
+      <!-- Left: Image -->
+      <div class="relative hidden lg:block lg:w-2/5">
+        <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?w=800&q=80" alt="Fresh Fruits" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0" style="background:linear-gradient(180deg,transparent 30%,rgba(0,0,0,.7) 100%)"></div>
+        <div class="relative z-10 flex flex-col justify-end h-full p-8 min-h-[420px]">
+          <h2 class="text-2xl font-extrabold text-white mb-2">Join the Smoothix Family</h2>
+          <p class="text-sm text-white/70 mb-4">Create your account and start earning rewards on every blend.</p>
+          <div class="flex items-center gap-6">
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-gift text-sm" style="color:#FF7A18"></i>
+              <span class="text-xs text-white/80">Free drink on signup</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-star text-sm" style="color:#FF7A18"></i>
+              <span class="text-xs text-white/80">Earn points</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Right: Form -->
+      <div class="w-full lg:w-3/5 p-6 sm:p-8 flex flex-col justify-center">
+        <div class="text-center mb-5">
+          <div class="w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-3" style="background:rgba(255,122,24,.1)">
+            <i class="fa-solid fa-user-plus text-xl" style="color:#FF7A18"></i>
+          </div>
+          <h1 class="text-2xl font-extrabold mb-1" style="color:var(--nav-text)">Create Account</h1>
+          <p class="text-xs" style="color:var(--nav-muted)">Fill in your details to get started</p>
+        </div>
+        <form class="space-y-3" onsubmit="return false">
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold mb-1.5" style="color:var(--nav-muted)">First Name</label>
+              <div class="relative">
+                <i class="fa-solid fa-user absolute left-4 top-1/2 -translate-y-1/2 text-sm" style="color:var(--nav-muted)"></i>
+                <input type="text" required placeholder="John" class="w-full pl-11 pr-4 py-2.5 rounded-xl text-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#FF7A18]/30" style="background:var(--secondary-bg);border:1px solid var(--border);color:var(--body-text)">
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold mb-1.5" style="color:var(--nav-muted)">Last Name</label>
+              <div class="relative">
+                <i class="fa-solid fa-user absolute left-4 top-1/2 -translate-y-1/2 text-sm" style="color:var(--nav-muted)"></i>
+                <input type="text" required placeholder="Smith" class="w-full pl-11 pr-4 py-2.5 rounded-xl text-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#FF7A18]/30" style="background:var(--secondary-bg);border:1px solid var(--border);color:var(--body-text)">
+              </div>
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold mb-1.5" style="color:var(--nav-muted)">Email Address</label>
+            <div class="relative">
+              <i class="fa-solid fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-sm" style="color:var(--nav-muted)"></i>
+                <input type="email" required placeholder="john@example.com" class="w-full pl-11 pr-4 py-2.5 rounded-xl text-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#FF7A18]/30" style="background:var(--secondary-bg);border:1px solid var(--border);color:var(--body-text)">
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold mb-1.5" style="color:var(--nav-muted)">Phone Number</label>
+            <div class="relative">
+              <i class="fa-solid fa-phone absolute left-4 top-1/2 -translate-y-1/2 text-sm" style="color:var(--nav-muted)"></i>
+                <input type="tel" placeholder="(212) 555-0000" class="w-full pl-11 pr-4 py-2.5 rounded-xl text-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#FF7A18]/30" style="background:var(--secondary-bg);border:1px solid var(--border);color:var(--body-text)">
+            </div>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold mb-1.5" style="color:var(--nav-muted)">Password</label>
+              <div class="relative">
+                <i class="fa-solid fa-lock absolute left-4 top-1/2 -translate-y-1/2 text-sm" style="color:var(--nav-muted)"></i>
+                <input type="password" required placeholder="Create password" id="signupPass" class="w-full pl-11 pr-11 py-2.5 rounded-xl text-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#FF7A18]/30" style="background:var(--secondary-bg);border:1px solid var(--border);color:var(--body-text)">
+                <button type="button" class="absolute right-4 top-1/2 -translate-y-1/2 text-sm" style="color:var(--nav-muted)" onclick="const p=document.getElementById('signupPass');const is=p.type==='password';p.type=is?'text':'password';this.innerHTML=is?'<i class=\'fa-solid fa-eye-slash\'></i>':'<i class=\'fa-solid fa-eye\'></i>'">
+                  <i class="fa-solid fa-eye"></i>
+                </button>
+              </div>
+              <div class="flex items-center gap-2 mt-2">
+                <div class="flex-1 h-1 rounded-full" style="background:var(--border)" id="bar1"></div>
+                <div class="flex-1 h-1 rounded-full" style="background:var(--border)" id="bar2"></div>
+                <div class="flex-1 h-1 rounded-full" style="background:var(--border)" id="bar3"></div>
+                <span class="text-[10px] font-semibold ml-1" style="color:var(--nav-muted)" id="strengthText">Weak</span>
+              </div>
+            </div>
+            <div>
+              <label class="block text-xs font-semibold mb-1.5" style="color:var(--nav-muted)">Confirm Password</label>
+              <div class="relative">
+                <i class="fa-solid fa-lock absolute left-4 top-1/2 -translate-y-1/2 text-sm" style="color:var(--nav-muted)"></i>
+                <input type="password" required placeholder="Confirm password" class="w-full pl-11 pr-4 py-2.5 rounded-xl text-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#FF7A18]/30" style="background:var(--secondary-bg);border:1px solid var(--border);color:var(--body-text)">
+              </div>
+            </div>
+          </div>
+          <label class="flex items-start gap-2 cursor-pointer">
+            <input type="checkbox" required class="w-4 h-4 rounded mt-0.5" style="accent-color:#FF7A18">
+            <span class="text-xs leading-relaxed" style="color:var(--nav-muted)">I agree to the <a href="#" class="font-semibold" style="color:#FF7A18">Terms of Service</a> and <a href="#" class="font-semibold" style="color:#FF7A18">Privacy Policy</a></span>
+          </label>
+          <button type="submit" class="w-full py-3 rounded-xl text-sm font-bold text-white transition-all hover:scale-[1.02] active:scale-95 shadow-lg hover:shadow-xl" style="background:#FF7A18">
+            <i class="fa-solid fa-user-plus mr-2"></i> Create Account
+          </button>
+        </form>
+        <div class="relative my-4">
+          <div class="absolute inset-0 flex items-center"><div class="w-full border-t" style="border-color:var(--border)"></div></div>
+          <div class="relative flex justify-center text-xs"><span class="px-3" style="background:var(--card-bg);color:var(--nav-muted)">or sign up with</span></div>
+        </div>
+        <div class="grid grid-cols-3 gap-3">
+          <button class="py-2.5 rounded-xl text-sm font-semibold transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2" style="border:1px solid var(--border);color:var(--nav-text)">
+            <i class="fa-brands fa-google text-base"></i>
+          </button>
+          <button class="py-2.5 rounded-xl text-sm font-semibold transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2" style="border:1px solid var(--border);color:var(--nav-text)">
+            <i class="fa-brands fa-apple text-base"></i>
+          </button>
+          <button class="py-2.5 rounded-xl text-sm font-semibold transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2" style="border:1px solid var(--border);color:var(--nav-text)">
+            <i class="fa-brands fa-facebook-f text-base"></i>
+          </button>
+        </div>
+        <p class="text-center text-xs mt-5" style="color:var(--nav-muted)">
+          Already have an account? <a href="login.html" class="font-semibold" style="color:#FF7A18">Sign in</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Dark Mode
+  const savedTheme = localStorage.getItem('smoothix-theme');
+  if (savedTheme === 'dark') document.documentElement.classList.add('dark');
+  const syncThemeIcon = () => {
+    const isDark = document.documentElement.classList.contains('dark');
+    document.querySelector('#themeToggle i').className = isDark ? 'fa-solid fa-sun text-sm' : 'fa-solid fa-moon text-sm';
+  };
+  syncThemeIcon();
+  document.getElementById('themeToggle').addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark');
+    const isDark = document.documentElement.classList.contains('dark');
+    localStorage.setItem('smoothix-theme', isDark ? 'dark' : 'light');
+    syncThemeIcon();
+  });
+
+  // RTL Toggle
+  const savedDir = localStorage.getItem('smoothix-dir');
+  if (savedDir === 'rtl') {
+    document.documentElement.setAttribute('dir', 'rtl');
+    document.documentElement.classList.add('rtl');
+  }
+  document.getElementById('rtlToggle').addEventListener('click', () => {
+    const isRtl = document.documentElement.getAttribute('dir') === 'rtl';
+    const newDir = isRtl ? 'ltr' : 'rtl';
+    document.documentElement.setAttribute('dir', newDir);
+    document.documentElement.classList.toggle('rtl', newDir === 'rtl');
+    localStorage.setItem('smoothix-dir', newDir);
+  });
+
+  // Password Strength
+  const passInput = document.getElementById('signupPass');
+  const bar1 = document.getElementById('bar1');
+  const bar2 = document.getElementById('bar2');
+  const bar3 = document.getElementById('bar3');
+  const strengthText = document.getElementById('strengthText');
+  passInput.addEventListener('input', () => {
+    const v = passInput.value;
+    let s = 0;
+    if (v.length >= 6) s++;
+    if (/[A-Z]/.test(v) && /[0-9]/.test(v)) s++;
+    if (/[^A-Za-z0-9]/.test(v)) s++;
+    const colors = ['#ef4444','#f59e0b','#22c55e'];
+    const labels = ['Weak','Medium','Strong'];
+    [bar1,bar2,bar3].forEach((b,i) => { b.style.background = i < s ? colors[s-1] : 'var(--border)'; });
+    strengthText.textContent = s > 0 ? labels[s-1] : 'Weak';
+    strengthText.style.color = s > 0 ? colors[s-1] : 'var(--nav-muted)';
+  });
+
+  // Scroll Reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); observer.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(r => observer.observe(r));
+</script>
+</body>
+</html>

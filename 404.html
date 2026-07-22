@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Page not found - Smoothix Juice & Smoothie Bar">
+  <title>404 - Page Not Found - Smoothix</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍊</text></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Poppins', sans-serif; overflow-x: hidden; transition: background .3s, color .3s; }
+  </style>
+</head>
+<body style="background:var(--body-bg);color:var(--body-text)">
+
+<!-- 404 SECTION -->
+<section class="min-h-screen flex items-center justify-center px-4" style="background:var(--body-bg)">
+  <div class="w-full max-w-2xl text-center">
+    <div class="reveal">
+      <!-- Glassmorphism Card -->
+      <div class="rounded-[2rem] p-8 sm:p-10 max-w-lg mx-auto" style="background:var(--card-bg);border:1px solid var(--border);box-shadow:0 30px 80px rgba(0,0,0,.08)">
+        <!-- Animated Juice Icon -->
+        <div class="w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-5 relative" style="background:rgba(255,122,24,.1)">
+          <i class="fa-solid fa-glass-water text-3xl" style="color:#FF7A18"></i>
+          <div class="absolute -top-1 -right-1 w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-extrabold text-white" style="background:#FF7A18">4</div>
+          <div class="absolute -bottom-1 -right-1 w-6 h-6 rounded-full flex items-center justify-center text-[10px] font-extrabold text-white" style="background:#FF7A18">4</div>
+        </div>
+
+        <!-- 404 Number -->
+        <h1 class="text-6xl sm:text-7xl font-black leading-none tracking-tight mb-1" style="color:var(--nav-text)">
+          4<span style="color:#FF7A18">0</span>4
+        </h1>
+
+        <!-- Message -->
+        <h2 class="text-lg font-bold mb-2" style="color:var(--nav-text)">Oops! This page got blended away</h2>
+        <p class="text-xs max-w-sm mx-auto mb-6" style="color:var(--nav-muted)">
+          The page you're looking for doesn't exist or has been moved.
+        </p>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <a href="index.html" class="px-6 py-3 rounded-xl text-xs font-bold text-white transition-all hover:scale-105 active:scale-95 shadow-lg hover:shadow-xl inline-flex items-center gap-2" style="background:#FF7A18">
+            <i class="fa-solid fa-house"></i> Back to Home
+          </a>
+          <a href="menu.html" class="px-6 py-3 rounded-xl text-xs font-bold transition-all hover:scale-105 active:scale-95 inline-flex items-center gap-2" style="border:2px solid #FF7A18;color:#FF7A18">
+            <i class="fa-solid fa-utensils"></i> View Menu
+          </a>
+        </div>
+
+        <!-- Divider -->
+        <div class="relative my-6">
+          <div class="absolute inset-0 flex items-center"><div class="w-full border-t" style="border-color:var(--border)"></div></div>
+          <div class="relative flex justify-center text-[10px]"><span class="px-3" style="background:var(--card-bg);color:var(--nav-muted)">or try these</span></div>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+          <a href="about.html" class="p-3 rounded-xl transition-all hover:scale-105 active:scale-95 text-center" style="border:1px solid var(--border)">
+            <i class="fa-solid fa-info-circle text-sm mb-1" style="color:#FF7A18"></i>
+            <p class="text-[10px] font-semibold" style="color:var(--nav-text)">About</p>
+          </a>
+          <a href="health.html" class="p-3 rounded-xl transition-all hover:scale-105 active:scale-95 text-center" style="border:1px solid var(--border)">
+            <i class="fa-solid fa-heart-pulse text-sm mb-1" style="color:#FF7A18"></i>
+            <p class="text-[10px] font-semibold" style="color:var(--nav-text)">Health</p>
+          </a>
+          <a href="combos.html" class="p-3 rounded-xl transition-all hover:scale-105 active:scale-95 text-center" style="border:1px solid var(--border)">
+            <i class="fa-solid fa-tags text-sm mb-1" style="color:#FF7A18"></i>
+            <p class="text-[10px] font-semibold" style="color:var(--nav-text)">Combos</p>
+          </a>
+          <a href="contact.html" class="p-3 rounded-xl transition-all hover:scale-105 active:scale-95 text-center" style="border:1px solid var(--border)">
+            <i class="fa-solid fa-envelope text-sm mb-1" style="color:#FF7A18"></i>
+            <p class="text-[10px] font-semibold" style="color:var(--nav-text)">Contact</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<script src="js/main.js"></script>
+<script>
+  // Scroll Reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); observer.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(r => observer.observe(r));
+</script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Login to Smoothix - Access your account, order history, and rewards.">
+  <title>Login - Smoothix</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍊</text></svg>">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Poppins', sans-serif; overflow-x: hidden; transition: background .3s, color .3s; }
+  </style>
+</head>
+<body style="background:var(--body-bg);color:var(--body-text)">
+
+<!-- MINIMAL NAV -->
+<nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" style="background:var(--nav-bg);border-bottom:1px solid var(--border);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 md:h-20">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-2.5 group flex-shrink-0" aria-label="Smoothix Home">
+        <div class="w-10 h-10 md:w-11 md:h-11 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-105 shadow-md" style="background:#FF7A18">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z"/>
+            <path d="M8 12c0-2.2 1.8-4 4-4s4 1.8 4 4"/>
+            <circle cx="12" cy="12" r="1.5" fill="white"/>
+          </svg>
+        </div>
+        <div class="hidden sm:block">
+          <span class="font-extrabold text-lg md:text-xl tracking-tight" style="color:var(--nav-text)">SMOOTH<span style="color:#FF7A18">IX</span></span>
+          <span class="block text-[10px] uppercase tracking-[0.25em] font-medium" style="color:var(--nav-muted)">Juice & Smoothie Bar</span>
+        </div>
+      </a>
+      <!-- Right: Login text + Toggles -->
+      <div class="flex items-center gap-3">
+        <button id="themeToggle" class="w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95" style="background:var(--secondary-bg);border:1px solid var(--border);color:var(--nav-muted)" title="Toggle Dark Mode" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon text-sm"></i>
+        </button>
+        <button id="rtlToggle" class="w-10 h-10 rounded-xl flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95" style="background:var(--secondary-bg);border:1px solid var(--border);color:var(--nav-muted)" title="Toggle RTL" aria-label="Toggle text direction">
+          <i class="fa-solid fa-arrow-right-arrow-left text-sm"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- LOGIN SECTION -->
+<section class="min-h-screen flex items-center justify-center px-4 py-24" style="background:var(--body-bg)">
+  <div class="w-full max-w-4xl reveal">
+    <div class="rounded-[2rem] overflow-hidden shadow-2xl flex flex-col lg:flex-row" style="background:var(--card-bg);border:1px solid var(--border)">
+      <!-- Left: Image -->
+      <div class="relative hidden lg:block lg:w-2/5">
+        <img src="https://images.unsplash.com/photo-1622597467836-f3285f2131b8?w=800&q=80" alt="Fresh Smoothie" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0" style="background:linear-gradient(180deg,transparent 30%,rgba(0,0,0,.7) 100%)"></div>
+        <div class="relative z-10 flex flex-col justify-end h-full p-8 min-h-[480px]">
+          <h2 class="text-2xl font-extrabold text-white mb-2">Welcome Back!</h2>
+          <p class="text-sm text-white/70">Log in to access your rewards, reorder favorites, and track your wellness journey.</p>
+        </div>
+      </div>
+      <!-- Right: Form -->
+      <div class="w-full lg:w-3/5 p-8 sm:p-10 flex flex-col justify-center">
+        <div class="text-center mb-6">
+          <div class="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4" style="background:rgba(255,122,24,.1)">
+            <i class="fa-solid fa-user text-2xl" style="color:#FF7A18"></i>
+          </div>
+          <h1 class="text-2xl sm:text-3xl font-extrabold mb-1" style="color:var(--nav-text)">Sign In</h1>
+          <p class="text-sm" style="color:var(--nav-muted)">Enter your credentials to access your account</p>
+        </div>
+        <form class="space-y-4" onsubmit="return false">
+          <div>
+            <label class="block text-xs font-semibold mb-1.5" style="color:var(--nav-muted)">Email Address</label>
+            <div class="relative">
+              <i class="fa-solid fa-envelope absolute left-4 top-1/2 -translate-y-1/2 text-sm" style="color:var(--nav-muted)"></i>
+              <input type="email" required placeholder="john@example.com" class="w-full pl-11 pr-4 py-3.5 rounded-xl text-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#FF7A18]/30" style="background:var(--secondary-bg);border:1px solid var(--border);color:var(--body-text)">
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-semibold mb-1.5" style="color:var(--nav-muted)">Password</label>
+            <div class="relative">
+              <i class="fa-solid fa-lock absolute left-4 top-1/2 -translate-y-1/2 text-sm" style="color:var(--nav-muted)"></i>
+              <input type="password" required placeholder="Enter your password" class="w-full pl-11 pr-11 py-3.5 rounded-xl text-sm transition-all focus:outline-none focus:ring-2 focus:ring-[#FF7A18]/30" style="background:var(--secondary-bg);border:1px solid var(--border);color:var(--body-text)">
+              <button type="button" class="absolute right-4 top-1/2 -translate-y-1/2 text-sm" style="color:var(--nav-muted)" onclick="const p=this.previousElementSibling;const is=p.type==='password';p.type=is?'text':'password';this.className=is?'fa-solid fa-eye-slash absolute right-4 top-1/2 -translate-y-1/2 text-sm':'fa-solid fa-eye absolute right-4 top-1/2 -translate-y-1/2 text-sm'">
+                <i class="fa-solid fa-eye"></i>
+              </button>
+            </div>
+          </div>
+          <div class="flex items-center justify-between">
+            <label class="flex items-center gap-2 cursor-pointer">
+              <input type="checkbox" class="w-4 h-4 rounded" style="accent-color:#FF7A18">
+              <span class="text-xs" style="color:var(--nav-muted)">Remember me</span>
+            </label>
+            <a href="#" class="text-xs font-semibold transition-colors hover:text-[#FF7A18]" style="color:#FF7A18">Forgot Password?</a>
+          </div>
+          <button type="submit" class="w-full py-3.5 rounded-xl text-sm font-bold text-white transition-all hover:scale-[1.02] active:scale-95 shadow-lg hover:shadow-xl" style="background:#FF7A18">
+            <i class="fa-solid fa-right-to-bracket mr-2"></i> Sign In
+          </button>
+        </form>
+        <div class="relative my-5">
+          <div class="absolute inset-0 flex items-center"><div class="w-full border-t" style="border-color:var(--border)"></div></div>
+          <div class="relative flex justify-center text-xs"><span class="px-3" style="background:var(--card-bg);color:var(--nav-muted)">or continue with</span></div>
+        </div>
+        <div class="grid grid-cols-3 gap-3">
+          <button class="py-3 rounded-xl text-sm font-semibold transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2" style="border:1px solid var(--border);color:var(--nav-text)">
+            <i class="fa-brands fa-google text-base"></i>
+          </button>
+          <button class="py-3 rounded-xl text-sm font-semibold transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2" style="border:1px solid var(--border);color:var(--nav-text)">
+            <i class="fa-brands fa-apple text-base"></i>
+          </button>
+          <button class="py-3 rounded-xl text-sm font-semibold transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2" style="border:1px solid var(--border);color:var(--nav-text)">
+            <i class="fa-brands fa-facebook-f text-base"></i>
+          </button>
+        </div>
+        <p class="text-center text-xs mt-5" style="color:var(--nav-muted)">
+          Don't have an account? <a href="signup.html" class="font-semibold" style="color:#FF7A18">Sign up free</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Dark Mode
+  const savedTheme = localStorage.getItem('smoothix-theme');
+  if (savedTheme === 'dark') document.documentElement.classList.add('dark');
+
+  const syncThemeIcon = () => {
+    const isDark = document.documentElement.classList.contains('dark');
+    document.querySelector('#themeToggle i').className = isDark ? 'fa-solid fa-sun text-sm' : 'fa-solid fa-moon text-sm';
+  };
+  syncThemeIcon();
+
+  document.getElementById('themeToggle').addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark');
+    const isDark = document.documentElement.classList.contains('dark');
+    localStorage.setItem('smoothix-theme', isDark ? 'dark' : 'light');
+    syncThemeIcon();
+  });
+
+  // RTL Toggle
+  const savedDir = localStorage.getItem('smoothix-dir');
+  if (savedDir === 'rtl') {
+    document.documentElement.setAttribute('dir', 'rtl');
+    document.documentElement.classList.add('rtl');
+  }
+
+  document.getElementById('rtlToggle').addEventListener('click', () => {
+    const isRtl = document.documentElement.getAttribute('dir') === 'rtl';
+    const newDir = isRtl ? 'ltr' : 'rtl';
+    document.documentElement.setAttribute('dir', newDir);
+    document.documentElement.classList.toggle('rtl', newDir === 'rtl');
+    localStorage.setItem('smoothix-dir', newDir);
+  });
+
+  // Scroll Reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); observer.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  reveals.forEach(r => observer.observe(r));
+</script>
+</body>
+</html>
