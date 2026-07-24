@@ -24,8 +24,11 @@
             <a href="index.html" class="flex items-center gap-2.5 mb-5 group" aria-label="Smoothix Home">
               <div class="w-11 h-11 rounded-2xl flex items-center justify-center shadow-lg transition-transform duration-300 group-hover:scale-105"
                    style="background:linear-gradient(135deg,#FF7A18,#e86a10)">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
-                  <circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="1.5" fill="white"/>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 9 L9 17 Q12 21 15 17 L18 9"/>
+                  <line x1="5" y1="9" x2="19" y2="9"/>
+                  <line x1="14" y1="4" x2="11" y2="15"/>
+                  <path d="M14 4 Q17 2 16 6"/>
                 </svg>
               </div>
               <div>

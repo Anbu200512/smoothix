@@ -69,10 +69,11 @@
           <a href="index.html" class="flex items-center gap-2.5 group flex-shrink-0" aria-label="Smoothix Home">
             <div class="w-9 h-9 lg:w-10 lg:h-10 xl:w-11 xl:h-11 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-105 shadow-md"
                  style="background:#FF7A18">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z"/>
-                <path d="M8 12c0-2.2 1.8-4 4-4s4 1.8 4 4"/>
-                <circle cx="12" cy="12" r="1.5" fill="white"/>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 9 L9 17 Q12 21 15 17 L18 9"/>
+                <line x1="5" y1="9" x2="19" y2="9"/>
+                <line x1="14" y1="4" x2="11" y2="15"/>
+                <path d="M14 4 Q17 2 16 6"/>
               </svg>
             </div>
             <div class="hidden sm:block">
@@ -163,7 +164,12 @@
       <div class="flex items-center justify-between p-5" style="border-bottom:1px solid var(--border)">
         <a href="index.html" class="flex items-center gap-2">
           <div class="w-9 h-9 rounded-xl flex items-center justify-center" style="background:#FF7A18">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="1.5" fill="white"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 9 L9 17 Q12 21 15 17 L18 9"/>
+              <line x1="5" y1="9" x2="19" y2="9"/>
+              <line x1="14" y1="4" x2="11" y2="15"/>
+              <path d="M14 4 Q17 2 16 6"/>
+            </svg>
           </div>
           <span class="font-extrabold text-lg" style="color:var(--nav-text)">SMOOTH<span style="color:#FF7A18">IX</span></span>
         </a>

@@ -194,6 +194,12 @@ body {
 /* ─── Responsive ──────────────────────────────────────────────────────────── */
 @media (max-width: 640px) {
   .hero-title { font-size: 2.5rem !important; }
+
+  /* Form placeholders – smaller on mobile */
+  input::placeholder,
+  textarea::placeholder {
+    font-size: 0.8rem;
+  }
 }
 
 /* ─── Newsletter placeholder ──────────────────────────────────────────────── */
